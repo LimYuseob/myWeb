@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var w;
+
+function openwin(){
+	w = window.open('','','width=200 height=200')
+	
+	//만약 브라우저에서 팝업이 차단되시에는 null 이 리턴되어집니다.
+	//이걸 이용해서 차단 해제 요청같은걸 할 수 있음..
+	if(w == null){
+		alert("팝업이 차단되었네요..해제 바랍니다.")
+	}
+	//열린창에서 컨텐츠를 입력할때는 계층대로 호출해야 합니다.
+	w.document.write("<p>오늘은 스크립트 종료일</p>");
+}
+
+function movewin(){
+	w.moveBy(10,10);
+	w.focus();
+	
+}
+
+
+
+</script>
+</head>
+<body onload="openwin();">
+
+
+<input type="button" value="윈도우 생성" onclick="openwin();">
+<input type="button" value="윈도우 생성" onclick="movewin();">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function returnAxle(){
+	var axles = ["금도끼","은도끼","쇠도끼"];
+	var lost_Ax = document.getElementById("lAxle").value;
+	var message = "";
+	message = "이 " + axles[0] + "가 네도끼냐??"
+	var answer = confirm(message);
+	if(answer){
+		answer = lost_Ax == axles[0] ? true : false;
+	}else{
+		answer = lost_Ax == axles[0] ? false : true; 	
+	}
+	
+	if(!answer){
+		message = "거짓말을 하다니...고얀놈..Go Back Home 하거라";
+	}else{
+		message = "참으로 가상하구나.." + axles[0] + "와 " + lost_Ax + " 모두 가져가거라~";
+	}
+	
+	var resP = document.getElementById("result");
+	resP.style.border = "1px solid";
+	resP.style.backgroundColor = 'blue';
+	resP.style.color = 'white';
+	resP.innerText = message;
+}
+</script>
+</head>
+<body>
+<h3>연못에 빠진 도끼를 입력하세요.산신령이 도와줄겁니다.</h3>
+<form action="" name="myform">
+	도끼타입 입력 : <input type="text" name="lAxle" id="lAxle"><br>
+	<input type="button" id="findit" value="산신령찬스" onclick="returnAxle();">
+</form>
+
+<p id="result">
+</p>
+</body>
+</html>

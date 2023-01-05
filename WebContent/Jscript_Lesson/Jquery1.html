@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="JQuery/jquery-3.6.2.min.js"></script>
+</head>
+<body>
+<h1>이건 헤딩내용</h1>
+<h2>이건 헤딩2</h2>
+<img alt="" src="../TEACHERforder/coffee-blue.jpg">
+
+<button name="button" id="button">눌러주세요</button>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		alert("안녕하세요...");	
+		$("h1").hide("slow");//"fasw","slow","millis"
+		$("h2").show("fast");
+		$("img").slideUp();
+	})
+	
+	
+})
+
+</script>
+</body>
+</html>

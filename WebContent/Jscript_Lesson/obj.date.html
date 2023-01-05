@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//기본 Date 객체 생성법
+
+var d1 = new Date(2022,11,13);//년원일을 지정된 값으로 초기화한 데이트 객체 생성
+var d2 = new Date("january 20, 2022 12:00:00");
+var d3 = new Date();
+/*
+alert(d1.toDateString());//내부적으로 toString() 이 호출되어집니다.
+alert(d2.toISOString());
+alert(d3.toJSON());
+*/
+alert(d1.getTime());
+alert(d3.getTime());
+</script>
+</body>
+</html>

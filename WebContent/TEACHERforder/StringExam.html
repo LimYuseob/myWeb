@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkId(){
+	var idInput = document.getElementById("id").value;
+	
+	if(idInput.length < 8){
+		alert("반드시 8자 이상이어야 함");
+	}
+}
+</script>
+</head>
+<body>
+아이디 : <input type="text" id="id" size="10">
+<button onclick="checkId();">check</button>
+
+<script type="text/javascript">
+//정규식메서드 match();
+
+var str = "Like son, like father";
+
+result = str.match(/like/ig);//intensive(대소문자구분없이 마커), globally --- 나중에 폼검증시 다시함..
+alert(result);
+
+
+
+//split(,[limit(분리 갯수)]); 
+s = "One, Two, Three, Four"; //만약 one 의 delimeter 를 , 아닌 다른것으로 할 경우, 첫 delimeter 전까지를 하나의 Value 로 리턴한다.
+arr = s.split(',');
+for(i = 0; i<arr.length; i++){
+	document.write(arr[i] + "<br/>");
+}
+
+//html 랩퍼 메서드..문자 관련 HTML 태그에 대한 메서드..
+s = "Hello World";
+document.write(s.bold());
+document.write(s.strike());
+document.write("Link " + s.link("http://www.google.com"));
+
+
+</script>
+</body>
+</html>

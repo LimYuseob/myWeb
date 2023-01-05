@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var num = new Number(8);
+console.log(typeof(num));
+
+//toFiexed[digits] --> 고정소수점 반환. 파람값은 소수점 자릿수 지정
+var num2 = 123.45678; var diff = 123.45999;
+console.log(num2.toFixed(1));
+console.log(num2.toFixed(2));
+
+if(num2.toFixed(2) == diff.toFixed(2)){
+	alert("소숫점 2자리까지 같음");
+}
+
+//진법 숫자 표현. toString(진수)
+var num3 = 123;
+console.log(num3.toString());
+console.log(num3.toString(16));
+console.log(num3.toString(8));
+console.log(num3.toString(2));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>즉시실행 함수</title>
+</head>
+<body>
+<script type="text/javascript">
+//ex1
+(function (){
+	var userName = prompt("이름 입력");
+	document.write("안녕.." + userName + "님.");	
+}());
+
+//ex2
+(function(a,b){
+	sum = a + b;
+	//var sum = a + b;//이렇게 하면 지역 변수로 인식하여 not defined Error
+}(100,200));
+document.write("param 호출 함수 : " + sum);
+</script>
+</body>
+</html>

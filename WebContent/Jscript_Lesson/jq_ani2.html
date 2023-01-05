@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="JQuery/jquery-3.6.2.min.js"></script>
+<script type="text/javascript">
+	//animate({반드시 key=value 는 중괄호 내에 정의 "," 룰 기준으로 속성 나열},
+	//duration(fast,slow,millis))
+	//애니메이션효과를 중지 시키고 싶을때는 적용된 대상에게 stop() 를 호출합니다.
+	$(document).ready(function(){
+		$("#start").click(function(){
+			$("#child").animate({left:'300px',opacity:'0.5',width:'150px'},10*1000);
+		});
+		$("#stop").click(function(){
+			$("#child").stop();
+		})
+	});
+</script>
+</head>
+<body>
+<img alt="" src="../my1sthome/images/seoul.jpg" 
+id="child" width="120" height="100" style="position: relative;">
+
+<button id="start">애니메이션 시작</button>
+<button id="stop">애니메이션 스탑</button>
+</body>
+</html>

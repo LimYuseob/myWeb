@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position 활용 예제</title>
+<style type="text/css">
+/*
+요소 위치 정하기 : position --> 종류로는 static(정상적인 브라우저의 흐름), relative
+(정상적인 위치의 기준점 기준), absolute(컨테이너의 원점이 기준점), fixed(브라우저를 기준으로
+항상 그위를 고정하는 기준)
+*/
+
+#one{
+	background-color : cyan;
+	width: 200px;
+	height: 50;
+}
+#two{
+	position : static;
+	background-color: yellow;
+	width: 200px;
+	height: 50;
+}
+#three{
+	background-color: green;
+	width: 200px;
+	height: 50;
+}
+</style>
+</head>
+<body>
+<p id="one">여긴 Block     #1</p>
+<p id="two">여긴 Block     #1<br> position 은 static</p>
+<p id="three">여긴 Block     #1</p>
+
+
+</body>
+</html>

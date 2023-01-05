@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Block 요소의 겹침(stack)에서 Stack의 구조를 변경하는 요소</title>
+<!-- z-index 속성 : 겹침이 발생하는 경우 stack 구조로 쌓이게 됩니다.(ex div + div +div)
+	이때엔 아래의 요소는 위의 요소에 가려져 안보입니다. 이때 이 순서를 변경할 수 있는 속서잉 그것
+	입니다. 단, 꼭 주의해야 할 것은 position 속성이 absolute or fixed 인 경우여야만 합니다.
+	z-index는 0 ~ 무한대로 줄 수 있는데, 보통은 n00 단위 ..0값이 적용된 애가 last가 되고,
+	큰값이 first로 되어집니다. 물론 ~정수 도 줄 수 있습니다.
+ -->
+<style type="text/css">
+ #box1{
+ position: absolute;
+ top: 0px; left: 0px;
+ width: 100px; height: 100px;
+ background-color: blue;
+ z-index: 200;
+ }
+ #box2{
+ position: absolute;
+ top: 30px; left: 30px;
+ width: 100px; height: 100px;
+ background-color: yellow;
+ z-index: 0;
+ }
+ #box3{
+ position: fixed;
+ top: 60px; left: 60px;
+ width: 100px; height: 100px;
+ background-color: green;
+ z-index: 100;
+ }
+
+</style> 
+</head>
+<body>
+<div id="box1">box #1</div>
+<div id="box2">box #2</div>
+<div id="box3">box #3</div>
+</body>
+</html>

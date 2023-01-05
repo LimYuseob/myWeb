@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function get(){
+	var value = document.getElementById("ex").innerHTML;
+	alert(value);
+}
+function set(v){
+	document.getElementById("ex").innerHTML = v;
+}
+</script>
+</head>
+<body>
+<div id="ex"><b>여기가 div 요소내용임..</b></div>
+	<a href="#" onclick="get();">div 요소 내용 출력 하기</a><br>
+	<a href="#" onclick="set('변경되었음');">div 요소 내용 변경 하기</a><br>
+
+</body>
+</html>

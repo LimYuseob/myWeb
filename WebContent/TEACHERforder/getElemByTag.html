@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li>list item 1</li>
+	<li>list item 2</li>
+	<li>list item 3</li>
+	<li>list item 4</li>
+	<li>list item 5</li>
+	<li>list item 6</li>
+</ul>
+
+<script type="text/javascript">
+var list = document.getElementsByTagName("ul")[0];
+var allItems = list.getElementsByTagName("li");
+
+for(var i = 0, length = allItems.length; i<length; i++){
+	alert(allItems[i].firstChild.data);//value 속성이 아닌 data 속성에 주의 할것..
+}
+</script>
+</body>
+</html>

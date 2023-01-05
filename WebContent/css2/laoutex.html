@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+body{
+	background-color: gray;
+	font-family: Arial, sans-serif;
+	margin: 0px;
+}
+
+header{
+	background-color: blue;
+	color: #000000;
+	margin: 0px;
+	text-align: center;
+	padding: 5px;
+}
+h1{
+	margin: 0px;
+}
+
+section#main{
+	display: table-cell;
+	background-color: yellow;
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+}
+nav{
+	display: table-cell;
+	background-color: lime;
+	padding: 15px;
+}
+footer{
+	background-color: olive;
+	color: #efe5d0;
+	text-align: center;
+	padding: 10px;
+	margin: 0px;
+	font-size: 90%
+}
+
+</style>
+<!-- 블락을 시멘틱으로 분리 시킨후 내부에 요소를 적용한다. !-->
+</head>
+<body>
+	<header>
+		<h1>My First Blog Web</h1>
+	</header>
+	<nav>
+		<h1>협력사</h1>
+	<ul><!-- Navigation -->
+		<li><a href="https://www.naver.com">naver</a></li>
+		<li><a href="https://www.daum.net">daum</a></li>
+		<li><a href="https://www.google.com">google</a></li>
+	</ul>
+	<img alt="" src="images/pome.png" width="60" height="60">	
+	</nav>
+	<section id="main">
+		<article>
+			<h1>
+				HTML 이란
+			</h1>
+			<p>
+				Hyper Text MarkUp Language 의 약자로 웹 문서를 작성하는 언어이다.
+			</p>
+		</article>
+		<article>
+			<h1>
+				div와 span이란
+			</h1>
+			<p>
+				div 은 "devide" 의 약자로 페이지를 논리적인 섹션으로 분리하는데 사용된다.<br>
+				span 은 인라인 요소로서 텍스트의 컨테이너로 사용할 수 있다.
+			</p>
+		</article>
+	</section>
+	<!-- 여기까지 Content Section 정의 완료.. -->
+
+	<!-- Footer 정의 -->
+	<footer>
+		CopyLeft All Rights Free 2022
+	</footer>
+</body>
+</html>

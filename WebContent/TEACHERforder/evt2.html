@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 즉시 실행 콜백이벤트함수예제</title>
+</head>
+<body>
+<div id="container">
+	<img alt="" src="cup-1.png" id="cup">
+</div>
+
+<script type="text/javascript">
+	var cup = document.getElementById("cup");
+	cup.onclick = changepic;//주의!!!! DOM 에 이벤트연결후 핸들러 호출시엔 ()를 넣게되면 즉시 실행함수처럼 된다..즉 이벤트시 호출되려면 () 빠져야한다.
+	
+	function changepic(){
+		cup.src = "cup-2.png";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글꼴 관련 스타일</title>
+<style type="text/css">
+	h1{
+		color: red;
+	}
+	#divC{
+		border: 1px;
+		margin: 10px auto;
+		padding: 10px, 20px;
+	}
+	body{
+		font-family: "맑은 고딕",돋움,굴림;
+	}
+	h3#ufont {
+		font-family: 휴먼아미체,휴먼둥근헤드라인;
+		font-style : italic;
+		font-variant: small-caps;
+		font-weight: bolder;
+		color: red;	
+	}
+
+@font-face {
+	font-family: 'Ostrich';
+	src: local('Ostrich Sans'),
+	url('fonts/ostrich-sans-bold.woff') format('woff'),	
+	url('fonts/ostrich-sans-bold.ttf') format('truetype'),	
+	url('fonts/ostrich-sans-bold.svg') format('svg');	
+}
+.wfont{
+	font-family: 'Ostrich', sans-serif;/*웹 폰트 지정*/
+}
+p{
+	font-size: 30px;
+}
+/*
+외부폰트 사용하기.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+/*외부폰트 서체 적용선택자 정의*/
+h1{
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 60px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*폰트컬러 적용 style */
+li{
+	color: #0000ff;
+}
+.accent{
+	color: hsl(0,100%,50%);
+	font-weight: bold;
+}
+
+/*hsla 를 이용한 불투명도 색상 정의 둘다 흰색이라 백그라운드 적용함.*/
+/*
+body {
+      background:url('images/bg.jpg') no-repeat fixed;
+      background-size:cover;
+      text-align:center;
+    }*/
+.color1{
+	color: rgb(255,255,255); /*흰색*/
+}
+.color2{
+	color : rgba(255,255,255,0.5);/*반투명*/
+}
+</style>
+</head>
+<body>
+	<div>
+		<h1>글꼴을 지정하는 font-family. 정의문 font-family : &lt;글꼴명&gt;, [&lt;글꼴명&gt;, &lt;글꼴명&gt;]</h1>
+		<h3>사용자가 지원되지 않는 글꼴인 경우 위에서처럼 추가 글꼴을 선언한다.<br>
+			body에 글꼴을 지정하면 하위 모든 노드에 기본적으로 상속된다.
+			추가 font 속성<br>
+			1.font-size : 값1,값2,값n.... or &lt;절대크기&gt;&lt;상대크기&gt;&lt;크기&gt;&lt;백분율&gt;<br>
+			2.font-varient(키워드 값) : normal,small-caps 
+		</h3>
+		<h3 id="ufont">
+			3.font 속성의 값으로 위 모든걸 한번에 정의 가능함. ex>font : &lt;font-style&gt;,&lt;font-varient&gt;,&lt;font-weight&gt;<br>
+			3_1.시스템 글꼴 확인 방법 : win Key + R(실행) --> control --> 글꼴 --> 서체명 확인 
+		</h3>
+	</div>
+	<div>
+		<h2>웹폰트 : 시스템 글자가 아닌 사용자가 다운로드 받아 사용하는 폰트 형태. 확장자로는 .ttf(true type..크기가 큼), .eot, .woff, woff2 등이 있다.</h2>
+		<h3>적용 문법으로는 @font-face{font-family : 사용 글꼴명(변수명처럼 사용); src : local('글꼴명'), url(파일명전체1)  format('확장자'), url(파일명2) format('확장자'), 파일명n.....} "@" 을 이용해 소스 경로및 설정을 적용한다.</h3>
+		<p>Using Default Font</p>
+		<p class="wfont">Using Web</p>
+	</div>
+	<div>
+		<h2>외부 서체 활용하기 : 무료 지원 되는 외부 사이트의 서체 활용법(구글) -> 주소창 : fonts.google.com --> 서체선택 --> Select Regular...Click --> @impoprt Select<br>
+			style 정의부와, Css Rules to families 컨텐트 복사
+		</h2> 
+		<h1>여긴 구글 서체 적용예입니다.</h1>
+	</div>
+	<div>
+		<h2>Text Style</h2>
+		<ol>
+			<li>
+				color : 표기법으론 rgb 16진수, 영문 상수값, hsl(hsla -> alpha 지정값) . 16진수 rgb(#6자리 16진수로 표기, 중복시 하나로 축약 가능), hsl 은 백분율 표기로, 둥근 색상환을 기준으로 한다.  
+			</li>
+			<li class="accent">
+				여긴 hsl 을 적용한 style..
+			</li>
+			<li class="color1">rgb HTML</li>
+			<li class="color2">
+				RGBA CSS
+			</li>
+			<li>
+				Text Align : 문자 정렬 속성. justify(양쪽 균등 분할)<a href="text-align.html">text-align</a>
+			</li>
+			<li>
+				줄 간격 조절 : line-height. 문단이 두줄 이상일 경우 줄 간격 발생함. 값으로는 px, 백분율 등을 이용함. ex> 2.0 == 200%(글자 크기의 2배로 줄간격 적용)
+				<a href="line-height.html">line-height</a><br>
+				또한, 세로로 text 정렬시 text-height 값과 같은 값으로 주면 세로 가운데 정렬을 시킬수 있다.
+				<a href="line-height-col-1.html">미정렬</a>&nbsp;&nbsp;&nbsp;<a href="line-height-col-2.html">정렬</a><br>
+			</li>
+			<li>
+				text-decoration : 텍스트에 줄을 표시하거나 삭제 속성..값으론 none, underline, overline&nbsp;&nbsp;&nbsp;<a href="text-decoration.html">text-decoration</a>
+			</li>
+			<li>
+				text-shadow : 텍스트에 그림자 효과(4개의 속성을 줄수 있다. 가로거리(필수,"-" 글의 왼쪽, "+" 글의 오른쪽), 세로거리(필수,"+" 글의 아래, "-" 반대), 번짐 값("+" 모든방향으로 번짐..크게 보임), 색상(하나 이상의 색상 지정가능함))
+				&nbsp;&nbsp;&nbsp;<a href="text-shadow.html">text-shadow</a>
+			</li>
+		</ol> 
+	</div>
+	<div>
+		<h1>목록 스타일 : list-style-type 속성을 이용하여 ul,ol 등의 항목에 style 적용.</h1>
+		<h2>값으로는 disc(채운원),circle(원),square(채운사각),decimal(1시작 10진수),decimal-leading-zero(01,02),lower-roman,upper-roman,none 등이 있다.</h2>
+		<h3><a href="list-1.html">예제1</a></h3>
+		<h1>이미지 목록 스타일 : list-style-image : url(이미지 경로) or NONE</h1>
+		<h3><a href="list-2.html">이미지 리스트 목록</a></h3>
+	</div>
+</body>
+</html>

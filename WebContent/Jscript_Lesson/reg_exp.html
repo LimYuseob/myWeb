@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkNumberic(e,msg){
+	//입력한 값을 정규화할 패턴식을 만듭니다.
+	//스크립트에서는 /pattern/ 를 이용 패턴을 만들게 되면 RegExp 객체가 자동으로 생성됩니다.
+	//해당 객체를 파라미터로 받는 메서드에 넘겨주면 끝.
+	var exp = /^[0-9]+$/;
+	
+	//위 패턴 사용자가 입력한 값은 문자열이기에 match() 라는 메서드에 적용할 수 있습니다.
+	//위 메서드는 정규화식에 사용되는 메서드입니다.
+	if(e.value.match(exp)){
+		return true;
+		
+	}else{
+		alert(msg);
+		e.focus();
+		return false;
+	}
+	
+}
+
+</script>
+</head>
+<body>
+전화번호("-" 없이 입력) : <input type="text" id="phone">
+<input type="button" onclick="checkNumberic
+(document.getElementById('phone'),'숫자만 입력하세요!');" value="전송">
+</body>
+</html>

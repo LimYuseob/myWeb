@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명함수</title>
+<script type="text/javascript">
+var aFuncVar = function(a,b){
+	alert("안녕하세요");
+	return a == undefined ? "A":"B" || b == undefined ? "C":"D";
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+result =  aFuncVar();
+console.log(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크립스 구현시 브라우저 해석 순서..</title>
+<style type="text/css">
+body{
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+<h1 id="heading">여기 해더내용</h1>
+<p id="text">여기 문장 내용</p>
+
+<script type="text/javascript">
+var pTag = document.querySelector("#text");
+var head = document.querySelector("#heading");
+pTag.onclick=function(){
+	pTag.style.backgroundColor = 'blue';
+	pTag.style.color = 'white';
+}
+head.onclick=function(){
+	head.style.color = 'red';
+}
+</script>
+</body>
+</html>

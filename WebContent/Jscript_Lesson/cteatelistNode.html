@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function newList(f){
+	var newItem = document.createElement('li');
+	var subject = document.querySelector("#subject");
+	var newTxt = document.createTextNode(subject.value);
+	
+	newItem.appendChild(newTxt);
+	
+	var itemList = document.getElementById("itemList");
+	//itemList.appendChild(newItem);
+	itemList.insertBefore(newItem, itemList.childNodes[0]);
+	subject.value="";
+	
+	var items = document.querySelectorAll("li");
+	//모든 li 요소에 이벤트 등록 및 삭제 핸들러함수(콜백함수)를 지정합니다.
+	for(i = 0; i<items.length; i++){
+		//addEventListener 메서드엔 파라미터가 2개 필요함
+		//1번은 이벤트 종류, 2번째는 수행콜백함수
+		items[i].addEventListener("click", function(){
+			//내 자신의 부모가 있는지를 확인 합니다.
+			if(this.parentNode){
+				this.parentNode.removeChild(this);
+				
+			}
+			
+		});
+		
+	}
+}
+
+
+</script>
+</head>
+<body>
+<div id="con">
+	<h1>자바스크립트 공부..</h1>
+	<p>앞으로 공부할 내용</p>
+	
+	
+	<form action="" name="myform">
+	<input type="text" name="subject" autofocus="autofocus" id="subject">
+	<button onclick="newList(); return false;">추가</button>
+	
+	
+	</form>
+	<hr>
+	<!-- ul Tag 를 이용해서 하위에 입력한 값을 list 로 추가할 예정입니다. -->
+	<ul id="itemList">
+	
+	</ul>
+</div>
+</body>
+</html>

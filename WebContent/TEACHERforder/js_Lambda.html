@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>람다함수</title>
+</head>
+<body>
+<script type="text/javascript">
+//none params ramda1
+const varName = () =>{console.log("hi"); return "Greetings";} //정의부.
+alert(varName());//호출부..
+
+//만약 블락내부에 로직이 불필요시 return 값만 주며 정의할 수 있다..
+//simple Lambda2
+let varName2 = () => "다시 인사..";
+alert(varName2());
+
+//파라미터가 1개인 경우엔 () 생략 가능하다. 아래의 경우 user 가 파라미터 name 이 된다..주의!!! 구현부 바디는 생략 불가하다..주의!!!!
+var varName3 = user => {return user;}
+alert(varName3("노재현"));
+
+//파람이 2개 이상인 경우는 반드시 (p1,p2...) 선언해야함..
+var varName4 = (user,telNum) => {return (user + telNum);}
+alert(varName4("젠틀","111"));
+
+
+
+//호이스팅에 관련해서..익명함수는 호이스팅(끌어올려짐)이 되지 않는다.. 따라서 정의부 이전에 호출하면 에러 유발됨..
+f1();//OK
+//f2();//Cannot access 'f2' before initialization 에러..
+function f1(){
+	alert("f1");
+}
+const f2 = function(){
+	alert("f2");
+}
+f2();//OK ..이 말은 익명함수는 정의 후에 호출되어야 한다..즉 호이스팅이 되지 않는다는 의미이다.
+
+//람다에서 this 의 의미
+
+target = "Merry X-Mas All";//전역 변수
+function t1(){
+	alert(this.target);
+}
+//아래의 코드는 객체를 정의한 것이다..속성으로는 target, 메서드로는 위의 action 이다. 해당 메서드에는 this 를 이용한 target 메세지를 호출하도록 되어있다..어떤게 호출되는지 확인해보자. 
+const obj = {
+		target : 'Merry X-Mas Me',//
+		action : t1
+}
+obj.action();//이렇게 호출시엔 this 가 자신의 함수를 참조하기에 target 또한 자신의 값인 Merry X-Mas Me 가 출력된다. this 때문이다.
+
+
+//하지만 람다 함수의 내부 this 는 선언한 시점에서 호출된다..따라서 target 변수는 전역 설정한 값들을 찾게 된다..
+const t2 = () =>{
+	alert(this.target);
+}
+const obj2 = {
+		target : 'Merry X-Mas Me',//
+		action : t2
+}
+obj2.action();
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

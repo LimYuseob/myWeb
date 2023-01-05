@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 박스 모델</title>
+</head>
+<body>
+
+<h2>블락 레벨 요소 : 태그 사용시 한 줄을 사용하는 요소. h1, div, p 등이 이에 해당함. <a href="block.html">예시</a></h2>
+<h2>인라인 레벨 요소 : 컨텐츠만큼만 공간 차지함. 다른 요소 또는 같은 레벨을 중복 사용가능함.span, img, strong 등이 있다.  <a href="inline.html">예시</a></h2>
+
+<h2>박스모델 : 기본적으로 모든 요소를 박스 형태임. 이런 요소들을 원하는 위치하게 끔 하려면 이 모델의 원리를 파악해야함.</h2>
+<h2>박스모델은 컨텐츠를 기준으로 박스와의 공간을 padding, box 의 border, box 와 box 의 간격인 Margine 으로 구성됨</h2> 
+<h2>Contents 영역의 크기를 지정하는 width, height 속성 : 값으로는 px, em, %, auto(default) 이다. <a href="box-width.html">예시</a></h2>
+<h2>box-sizing : 박스 모델의 크기를 계산하는 속성. 텍스트와 이미지등의 Contents 배치시 padding, border 의 값까지 일일이 계산하지 않고, 크기를 동적으로 결정시 사용됨.
+<br>종류로는 border-box(테두리까지 포함하여 width 계산, 사용하기 편리함), content-box(컨텐트 영역만 계산..default) <a href="box-sizing.html">예시</a>
+</h2>
+<h2>box-shadow : 박스 모델에 그림자 효과(수평,수직 이상 필수, 흐림정도, 번짐정도,색상,inset(안쪽 그림자) 값이 있다.) <a href="box-shadow.html">예시</a></h2>
+<h2>border-style 속성 : 박스의 border 에 적용되는 속성, 순서는 Top --> R --> B -->L 로 이루어진다. 값으로는 none(default) 이며, hidden(감추기, table 의 border-collapse와 같음 <br>
+solid, dotted, dashed, double, groove, inset, outset,ridge 등이 있다.)<a href="border-1.html">예시</a></h2>
+<h2>border-width : px or 상수값  --> 값의 갯수에 따라 적용되는 면이 틀려진다. 1(4방), 2(T & B), 3(T->R->B), 4(All)<a href="border-2.html">예시</a></h2>
+<h2>border-color : width 와 같은 기준으로 최대 4개의 값을 줄수 있다. <a href="border-3.html">예시</a></h2>
+<h2>border : 위의 모든 속성을 한번에 적용할 수 있는 속성.. ex>border : 3px solid blue; <a href="border-4.html">예시</a></h2>
+<h2>border-radius : 각 모서리를 둥글게 처리하는 속성 : 값으로는 px,% 로 준다. 참고로 원형으로 처리할때는 w or h / 2 의 값을준다(px기준..image w/h 없을시 백분율). <a href="border-5.html">예시1</a> <a href="border-6.html">예시2</a></h2>
+
+<h1>만들어 보기. <a href="product.html">예시1</a> 을 <a href="product-tmp.html" target="_blank">결과1</a> or <a href="product-result.html" target="_blank">결과2</a> 이 되도록 CSS 를 수정해보자.
+<br>모든 DIV 에는 테두리를 그리고, 총 4개의 DIV 를 이용해서 각그룹을 #container(w : 600px, border 속성값은 none으로) 에 포함시킨다. container 각 화면 중앙에 배칠될 필요는 없다. 
+</h1>
+<h2>여백조절하기. Margin --> 블락요소간의 간격을 주는 속성. 값으로는 px,%,auto(default) 를 사용하고, 각 방위별 속성은 margine-top 처럼 확인할수 있다. 값1(ALL), 값2(T&B,R&L), 값3(T,R&L,B), 값4(T,L,B,R)
+ <a href="margin-1.html" target="_blank">예시</a>
+</h2>
+<h3>margin 속성을 이용해서 그룹요소를 화면 중앙에 배치하려면, width 의 값을 주고 auto 를 이용하면 된다. <a href="margin-3.html" target="_blank">예시</a></h3>
+
+</body>
+</html>

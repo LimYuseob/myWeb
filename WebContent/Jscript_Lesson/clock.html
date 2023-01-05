@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시계만들기</title>
+</head>
+<body>
+<div id="clock">
+</div>
+<script type="text/javascript">
+function seeClock(){
+	var now = new Date();
+	
+	//get.....메서드는 통칭해서 getter 라고 표현합니다.
+	var s = now.getHours() + " 시 " + now.getMinutes() + " 분 "
+	+ now.getSeconds() + " 초 ";
+	
+	
+	document.getElementById("clock").innerHTML = s;
+	//지정된 밀리세컨 이후에 함수를 실행시켜주는 window 객체의 메서드인
+	//setTimeout 을 호출하여 1 초에 한번씩 함수를 실행해 줍니다.
+	//set.....메서드는 통칭해서 setter 라고 표현합니다.
+	setTimeout("seeClock()",1000);
+	
+}
+seeClock();
+</script>
+</body>
+</html>

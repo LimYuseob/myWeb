@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style type="text/css">
+body{
+	height: 100%;
+	background-color: gray;
+	}
+label {
+	display: inline-block;
+	width: 120px;	
+}
+input {
+	display: inline-block;
+	width: 160px;
+}
+</style>
+</head>
+<body>
+<div id="page-warp">
+	<!-- 회원 가입은 Data 가 서버로 전송되어서 DB에 저장되는 중요한 정보 입니다.
+	또한 데이터의 크기도 지정하지 않는 이상 얼마나 클지 알수 없기에, 100% Post method
+	로 전송시킵니다. 참고로 서버로 전송 method 는 ger(defult), post, put, delete 
+	입니다. -->
+	<form action="process.jp" method="get">
+		<fieldset>
+			<legend>
+				회원 정보 입력
+			</legend>
+				<label for="name">ID</label>
+				<input type="text" name="name" id="text1">
+				<!-- 아래의 button 은 중복 검사시 입력된 또는 입력하는 ID를 서버에
+				전송해서 기존 ID 가 있는지를 일반적으로 검사합니다. 
+				이 때 사용하는것이 javaScript 의 이벤트 입니다. 일단은 형식만 보세요.-->				
+				<button onclick="">
+					중복검사<br>
+				</button>
+				
+				<label for="passoword1">암호</label>
+				<input type="password" name="password1"><br>
+				<label for="passoword2">암호확인</label>
+				<input type="password" name="password2"><br>
+				
+				<label for="name">이름</label>
+				<input type="text" name="name"><br>
+				
+				<label for="tel">휴대폰</label>
+				<input type="tel" name="tel"><br>
+				
+				<label for="email">이메일</label>
+				<input type="email" name="email"><br>
+				
+				<input type="radio" name="radio" value="M">남성<br>
+				<input type="radio" name="radio" value="F">여성<br>
+		</fieldset>
+		<input type="submit" name="submit" value="가입">
+		<input type="reset" name="reset" value="초기화">
+	</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE ht
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+속성 선택자 문법
+요소명[속성명] 으로 표기합니다.
+*/
+ul{
+	list-style: none;
+	
+}
+li{
+	width: 120px;
+	display: inline-block;
+	margin: 10px;
+}
+
+li a{
+	padding: 5px 20px;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+}
+/*특정 속성값을 가진 요소 리턴시키기. 속성=값*/
+a[target="_blank"]{
+	background-color: cyan;
+	border: 1px solid #ccc;
+	font-weight: bolder;
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="https://www.daum.net" target="_blank">daum</a></li>
+	<li><a href="https://www.naver.com">naver</a></li>
+	<li><a href="https://www.nate.com">nate</a></li>
+	<li><a href="https://www.google.com">google</a></li>
+
+</ul>
+<div>
+<ul>
+	<li><a href="#">5</a></li>
+	<li><a href="#">6</a></li>
+	<li><a href="#">7</a></li>
+	<li><a href="#">8</a></li>
+
+</ul>
+</div>
+</body>
+</html>

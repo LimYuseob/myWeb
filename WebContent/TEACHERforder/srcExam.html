@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<img alt="" src="pome.png" id="image" width="120" height="100">
+
+<script type="text/javascript">
+function changeImg(){
+	var img = document.getElementById("image");
+	alert(img.getAttribute('src') + img.getAttribute('width'));
+	img.src = 'poodle.png';
+	//아래는 setter 를 이용한 속성 변경..
+	setInterval(() => {//callBack 즉시 함수 구형
+		img.setAttribute('src','tshirt.jpg');
+	}, 2000);
+}
+</script>
+<input type="button" value="눌러요" onclick="changeImg()">
+ </body>
+</html>

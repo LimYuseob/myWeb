@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명함수 예제</title>
+<script type="text/javascript">
+//함수의 실행 결과를 담을 변수를 선언후 초기화 값으로 익명함수를 정의 합니다.
+var aFunctionVal = function(a,b){
+	alert("여긴 익명 함수의 내용");
+	return a==undefined ? "A":"B" || b==undefined ? "C":"D";
+	
+	
+}
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+result = aFunctionVal();
+console.log(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>숫자 맞추기 게임</title>
+<script type="text/javascript">
+
+var jungdap = Math.roudn((Math.random()*100)+1);
+var cont = 0;
+function returnN(){
+	var numb = parseInt(document.getElementById("num").value);
+	cont++;
+	if(numb == jungdap) hin = "성공입니다";
+	else if(numb < jungdap) hin = "낮습니다";
+	else hin = "높습니다.";
+	doccument.getElementById("con").value = cont;
+	doucument.getElementByid("hin").value = hin;
+	
+	
+	return true;
+	
+	
+}
+	
+	
+	
+	
+
+
+
+
+
+</script>
+
+</head>
+<body>
+<h2>숫자 맞추기 게임</h2>
+<p>이 게임은 컴이 생성한 숫자를 맞추는 게임입니다. 숫자는 1~ 100 사이에 있습니다.</p>
+<form action="" name="myform">
+숫자를 입력해 주세요: <input type="number" id="num">
+	<input type="button" value="제출" id="send" onclick="returnN();">
+추측 횟수:<input type="text" name="count" id="con">
+힌트:<input type="text" name="hint" id="hin">
+</form>
+</body>
+</html>

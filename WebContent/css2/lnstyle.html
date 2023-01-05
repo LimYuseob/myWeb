@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Link Css Style</title>
+<!--  가상클래스 : 이것은 가상의 개념인데, a 태그의 속성을 제어하는 클래스
+입니다. 보통 가상클래스는 ":"클래스 명을 선언해서 사용하는데, 대표적인 애들이
+가상링크 스타일 클래스 입니다. -->
+
+<style type="text/css">
+/*
+a:link : 방문전의 스타일
+a:visited : 방문된 스타일
+a:hover : 마우스 오버 스타일
+a:active : 마우스 클릭된 스타일
+
+위 스타일을 적용시엔 반드시 순서를 지키세요.
+*/
+a:link{color:red;}
+a:visited {color:blue;}
+a:hover {color:cyan;}
+a:hover {font-size: 20px;}
+a:active {color:orange;}
+</style>
+</head>
+<body>
+<p>가상링크 스타일 <a href="#" target="_balnk">예제</a>입니다.
+
+</body>
+</html>

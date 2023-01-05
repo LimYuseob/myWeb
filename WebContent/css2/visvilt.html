@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*visibillty 속성 : img 등이 배치가 되었을때 이 속성의 값에 따라
+보여지거나 안보여지게 할 수 있다. 값으로는 hidden, visible 로 줄 수 있다.
+안보여져도 위치에 따른 공간은 그대로 남아있다.
+*/
+#a{
+	visibility: hidden;
+	border: 1px dotted red;
+}
+#b{
+	visibility: visible;
+	border: 1px dotted red;
+}
+</style>
+<script>
+//이 부분만 JavaScript 영역입니다..대소문자까지 똑같이 코딩하세요.
+function t(){
+		let img2 = document.querySelector('#a');
+		
+		if(getComputedStyle(img2).visibility == 'hidden'){
+		img2.style.visibility = 'visible';}
+		
+	   else{
+	img2.style.visibility = 'hidden';
+
+		}
+}
+</script>
+</head>
+<body>
+<h2>Visibility 속성</h2>
+<img id="a" alt="lion" src="images/lion.png" width="150" height="120">
+<img id="b" alt="audio" src="images/audio.png" width="150" height="120"
+ onmouseover="t();" onmouseout="t();">
+
+</body>
+</html>

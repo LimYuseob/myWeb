@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>노드객체의 getter와 setter를 이용한 이미지 변경</title>
+</head>
+<body>
+<img alt="" src="images/pome.png" id="image" width="120" height="100">
+
+<script type="text/javascript">
+function changeImage(){
+	//img 노드를 먼저 찾습니다.
+	var img = document.getElementById("image");
+	//alert(img.getAttribute('src') + img.getAttribute('width'));
+	//img.src = "poodle.png";
+	img.setAttribute('src','images/poodle.png')
+	
+	setInterval(() => {
+	img.setAttribute('src','images/tshirt.jpg')
+	}, 2000);
+}
+
+
+</script>
+<input type="button" onclick="changeImage();" value="눌러주세요">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<!-- 구현예 : 기존에는 버튼을 눌렀을때 팝업으로 사진을 띄움-> 같은 이벤트시 사진이 나타나고, 사라지게 하게끔 변경..여기에 fadein,fadeout 효과 추가 -->
+<head>
+<meta charset="UTF-8">
+<title>JQuery DIV 이벤트 효과 내기</title>
+<link rel=stylesheet type="text/css" href="styles/my_style.css">
+</head>
+<body>
+<div id="clickme">오늘의 힐링 사진을 보여주세요</div>
+<div id="picframe">
+	<a href="#">우리는 현재 JQuery 를 공부합니다
+		<img alt="" src="healing.jpg">
+	</a>
+</div>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#clickme").click(function(){
+		$("img").fadeIn(3000);
+		$("#picframe").slideToggle("slow");
+	});
+});
+</script>
+</body>
+</html>

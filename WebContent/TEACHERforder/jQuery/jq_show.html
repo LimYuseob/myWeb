@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#dog").show("slow",function(){
+			$(this).hide(3000,function(){
+				$(this).toggle();
+			});
+		});
+	})
+})
+</script>
+</head>
+<body>
+	<button>Show it</button>
+	<img alt="" src="pome.png" id="dog" width="120" height="100" style="display: none">
+</body>
+</html>

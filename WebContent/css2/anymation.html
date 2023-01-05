@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+Animation 효과 : Css에선 KeyFrames 라는 속서을 이용해서 애니메이션을 정의
+합니다. 이 때 특징 개체가 애니메이션으로 구현될때 중간, 개체의 위치나 크기를 정의
+해주면 프레임이 그걸 실행해 주는 형태입니다.
+여기서 주목할 것은 애니메이션을 A ~ Z 까지를 모두 구현하는게 아니라 특정 Point
+즉 1 ~ 10 까지의 실행범위가 있다면, 개발자는 중간중 구간만 지정을 해주면됩니다.
+ex>시작 0% --> 첫 전개 25% --> 중간 전개 50% --> 종료 이전 75% --> 종료 100%
+이런식으로 정의하여 주면 중간에 비워진 프레임은 시스템이 알아서 채워주는 형태입니다.
+마지막으로 keyFrames 애니메이션이 정의되면, 적용될 개체에서 CSS 의 animation
+속성의 값으로 프레임 이름을 호출 하고, animation-iterator-count 라는 속성을
+통해 반복하는 횟수를 지정 합니다.
+*/
+/*keyFrames 정의 @ 을 이용해 선언한다 
+reference : 한국어 참조 합니다. 단축어로 ref 로 표현합니다.*/
+div{
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: relative;
+	animation : 2s myanim;/*2second 동안 anim 을 실행하라는 의미*/
+	animation-iteration-count : 10;/*10번 반복하라는 속성..*/
+}
+@keyframes myanim /*<-- myanim 이 키 프레임의 변수가 된다*/
+{
+	0% {background-color : red; left : 0px; top : 0px;}
+	25% {background-color : red; left : 100px; top : 0px;}
+	50% {background-color : cyan; left : 200px; top : 0px;}
+	75% {background-color : blue; left : 100px; top : 0px;}
+	100% {background-color : orange; left : 0px; top : 0px;}
+}
+
+</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

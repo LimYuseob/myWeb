@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for 구문을 이용한 heading 출력해보기</title>
+</head>
+<body>
+
+
+<script>
+//루프제어구문 : break(switch~case), continue;
+//이건 꼭 기억 : break 키워드는 조건문에선 Only switch~case 문에서만 쓰입니다.
+//break : 루프에서 가장 가까운 블락 밖으로 빠지는 키워드
+//continue : 이 키워드 하위에 있는 실행문은 무시하고 가장가까운 블락의 조건을 검사해서
+//조건이 true 면 재실행, 아니면 루프 탈출합니다.
+	var dan = 2;
+	var result;
+	for(var i = 0; i<=9; i++){
+		result = dan * i;
+		
+		
+		//모듈러 연산자는 1 % 2 처럼 나눠지지 않을 경우엔 첫수값을 리턴합니다.
+		//곱해지는 숫자가 홀수인 경우만 출력해주세요...즉 2 * 1 = 2, 2 * 3 = 6
+		if(i % 2 == 0){//i를 2로 나눠서 나머지값이 0인 경우는 무조건 짝수다.
+			//break;//이 키워드를 만나면 가장 가까운 루프 블락 밖으로 빠진다.
+		continue;
+		}
+		document.write("<tr><td>"+ dan + "*" + i + "=" + result + "</td></tr>") //2 * 1 = 2
+		
+		
+	}
+	
+	
+</script>
+</table>
+
+
+</body>
+</html>

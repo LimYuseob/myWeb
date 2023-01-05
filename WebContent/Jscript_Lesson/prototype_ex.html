@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 prototype예제</title>
+</head>
+<body>
+<script type="text/javascript">
+//생성자 함수 정의..x,y 좌표값을 기준으로 객체를 생성한다.
+function Point(xpos, ypos){
+	this.x = xpos;
+	this.y = ypos;
+	
+	//아래의 메서드는 원점으로부터 거리를 계산하는 함수입니다.
+	//공식처럼 사용되기때문에, 기억할 필욘업고, 메서드구나 만 인식하세요.
+	//this.getDistance = function(){
+		return Math.sqrt(this.x * this.x + this.y * this.y);
+	//}
+}
+
+//문법..객체..prototype.메서드명 = 함수(객체명){
+//내용부는 공유될 메서딍 내용부..
+//}
+
+Point.prototype.getDistance = function(p){
+		return Math.sqrt(this.x * this.x + this.y * this.y);
+	
+	
+	
+}
+
+var p1 = new Point(10,20);
+var d1 = p1.getDistance();
+var p2 = new Point(10,50);
+var d2 = p2.getDistance();
+
+document.write(d1+"<br>");
+document.write(d2+"<br>");
+//shared 라는 속성 또한 동적으로 공유 시킬수 있다.
+Point.prototype.shared = 10;
+
+</script>
+</body>
+</html>

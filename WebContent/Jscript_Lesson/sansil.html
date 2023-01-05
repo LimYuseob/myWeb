@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>금도끼 은도끼</title>
+<script type="text/javascript">
+//function 은 로직 처리를 위한 기능입니다. 떄문에 호출되기 전에 미리
+//메모리에 올리려는 목적으로 head 사이에 정의 합니다.
+function returnAxe(){
+	//1. 사용자가 입력한 도끼인지 여부와, 결과 메세지에 출력하기위해 도끼 종류를 배열로 초기화 합니다.
+	var Axes = ["금도끼","은도끼","쇠도끼"];
+	//2. 사용자가 잃어버린 도끼 이름을 얻어냅니다.
+	var lost_Axe = document.getElementById("laxe").value;
+	//alert(lost_Axe);
+	//3. 산신령이 전하는 내용을 message 라는 변수를 이용해서 할거에요..
+	var message = "";
+	message = "이" + Axes[0] + "는 네 도끼느냐??";
+	
+	var answer = confirm(message);
+	//*alert(answer);
+	
+	if(answer){//나무꾼이 금도끼 잃었다고 답했을경우..
+		answer = lost_Axe == Axes[0] ? true : false;
+		
+	}else{
+		//취소..즉 내 도끼는 금도끼가 아닙니다.
+		answer = lost_Axe != Axes[0] ? true : false;
+		
+	}
+	if(!answer){
+		message = "네 이놈! 어디서 거짓말을 고하느냐!";
+		 
+	}else{
+		message = "참한 인물일세..." + Axes[0] + "와" + lost_Axe + "모두 가져가거라";
+	}
+	
+	var resp = document.getElementById("result");
+	resp.style.border = "1px solid";
+	resp.style.backgroundColor = "yellow";
+	resp.style.color = "black";
+
+	//body 내의 특정 요소(Element) 내의 문자만 바꿀때는 innerText 라는 속성에 값만
+	//넣어주면 됩니다.
+	resp.innerText = message;
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+<h1>연못에 빠진 도끼를 입력하세요.. 산신령이 도와 줄겁니다.</h1>
+<form action="" name="myform">
+	도끼타입 입력 : <input type="text" id="laxe" name="laxe"><br>
+	<input type="button" id="findit" value="산신령찬스" onclick="returnAxe();">
+
+</form>
+<p id="result"></p>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+다중전환 : hovering 시에 대상을 transform(변환 또는 전환) 시키는 예제인데,
+이 다중전환 rotate(360도 기준), 
+-webkit-transform:rotate(degrees) 를 주어 너비와 높이가 변환되게 하는 예제..
+
+p Selector 의 속성으로 mouseout 시 역전환 시키는 효과도 같이 줍니다.
+*/
+
+p{
+	width: 100px;
+	height: 50px;
+	border: 1px solid black;
+	background: yellow;
+	transition : width 5s, height 5s, border 5s, transform 5s;
+	webkit-transition : 
+	width 5s, height 5s, border 5s, -webkit-transition 5s;
+}
+
+p:hover{
+	width: 200px;
+	height: 100px;
+	border: 10px solid red;
+	transform : rotate(180deg);
+	-webkit-transform : rotate(180deg);
+
+}
+</style>
+</head>
+<body>
+<p>마우스를 올려보세요~</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+컨테이너가 있을경우 이를 상대로 두고 포지셔닝을 한다. 즉 컨테이너 시작 위치부터 4방향(옵션)만큼
+멀어진 곳에 배치된다..이런 특성때문에 컨테이너는 대부분 realtive 로 선언되어진다.
+static 안됨...
+*/
+
+#one{
+	background-color : cyan;
+	width: 200px;
+	height: 50;
+}
+
+#container{
+	position: realtive;
+	background-color: gray;
+	width: 600px;
+	height: 50px;
+}		
+#two{
+	position : absolute;
+	top: 30px;
+	left : 30px;
+	background-color: yellow;
+	width: 200px;
+	height: 50px;
+}
+#three{
+	background-color: green;
+	width: 200px;
+	height: 50;
+}
+</style>
+</head>
+<body>
+<p id="one">여긴 Block     #1</p>
+<div id="container">
+난 컨테이너 입니다.<br>
+<div id="two">
+	여긴 bloack #2 입니다.
+</div>
+</div>
+<p id="three">여긴 Block     #1</p>
+
+
+</body>
+</html>

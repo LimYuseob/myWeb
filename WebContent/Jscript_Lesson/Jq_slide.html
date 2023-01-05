@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="JQuery/jquery-3.6.2.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#button").click(function(){
+		//메서드 체이닝..하나의 대상에 하나이상의 효과를 적용하는 방식.
+		$("img").show().fadeOut(2*1000).fadeIn(5*1000);
+	})
+})
+</script>
+</head>
+<body>
+<img alt="" src="../my1sthome/images/hands.jpg" width="200" height="120"
+style="display: none;">
+<button id="button">메서드체이닝.</button>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.ul1{
+		list-style: none;
+	}
+	.ul2{
+		list-style: lower-roman; 
+	}
+	.ul3{
+		list-style: decimal; 
+	}
+	.ul4{
+		/*일반 불릿 대신 이미 사용*/
+		list-style-image: url("images/dot.png");
+	}
+	
+	
+	
+	
+	
+	
+	body{
+		font-family: "맑은 고딕",돋움,굴림;
+		
+		}
+		
+		h3#ufont{
+			font-family: 휴먼아미체,휴먼둥근헤드라인;
+			font-style: italic;
+			font-variant: small-caps;
+			font-weight: bold;
+			color: red;
+			font-size: 30%;
+			
+			}
+/*web-font 사용하기*/
+@font-face{
+		font-family: 'Ostrich';
+		src:local('Ostrich Sans'),
+		url('fonts/ostrich-sans-bold.woff') format('woff'),
+		url('fonts/ostrich-sans-bold.ttf') format('ttf'),
+		url('fonts/ostrich-sans-bold.svg') format('svg');
+
+}
+	/*mywebFont 라는 클래스로 위 웹폰트를 정의하세요..*/
+	.mywebFont{
+		font-family: 'Ostrich', 휴먼둥근헤드라인;
+		}
+		/*외부폰트 사용하기*/
+		@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');		
+		/*Attribute*/
+		h1{
+			font-family: "Zen Dots KR", sans-serif;
+			font-size: 60px;
+			font-weight: bold;
+			font-style: italic;
+		}
+	
+		/*컬러와 백그라운드 이미지를 넣어서 테스트 합니다.*/
+		body{
+			/*background-image: url("images/bg.jpg");*/
+			background-size: cover;
+			text-align: center;
+		}
+		.color1{
+			color: rgb(255,255,255);
+		}
+		.color2{
+			color: rgba(255,255,255,0.5);
+		}
+		.myshadow1{/*4개의 값이 들어갈수 있음..1(가로 or 세로),2(상하)는 필수..나머진 option
+		3-->번짐정도..4-->컬러결정..*/
+			color : red;
+			text-shadow: 3px 1px black;			
+		}			
+		.myshadow2{
+			text-shadow: 5px 5px 3px cyan;			
+}			
+			
+</style>
+</head>
+<body>
+<h2 class="myshadow1">문자 그림자 효과1</h2>
+<h2 class="myshadow2">문자 그림자 효과2</h2>
+
+
+<p>
+	바디에 적용된 기본 글꼴입니다.
+</p>
+<h3 id="ufont">
+	하하하하..
+</h3>
+<h2 class="mywebFont">hell.</h2>
+<h1>구글폰트 끌어다 적용</h1>
+<h1 class="color1">구글폰트 끌어다 쓰기1</h1>
+<h1 class="color2">구글폰트 끌어다 쓰기2</h1>
+
+<ul class="ul1">list1
+	<li>고기</li>
+	<li>채소</li>
+	<li>양념</li>
+	<li>야채</li>
+</ul>
+<ul class="ul2">list2
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+<ul class="ul3">list3
+<li>a</li>
+<li>b</li>
+<li>c</li>
+<li>d</li>
+</ul>
+<ul class="ul4">list4
+<li>가</li>
+<li>나</li>
+<li>다</li>
+<li>라</li>
+</ul>
+
+</body>
+</html>

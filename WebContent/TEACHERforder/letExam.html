@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var gVal;//var 를 선언후 26 라인에서 사용하면 undefined 값 출력..즉 에러는 없은, var 없이 gVal 만 선언후 사용하면 not defined 에러 발생함. 
+
+let k = 10;
+function test(){
+	let c = 50;
+	alert(c);
+	//let c = 100;//aleady declared error. 중복선언 불가   
+	for(let i = 1; i<5; i++){//블락변수로 활용
+		
+	}
+	//alert(i);//i is Not Defined 에러. 블락변수로 활용됨.
+	let k = 20; //ok...let 은 외부에서 선언 후 내부에서 재선언 해도 문제없음.
+	alert(k);
+}
+function t2(){
+	alert(c);
+}
+function locatVarT(){
+	var locVal = 10;//지역 변수로 선언함.
+	gVal = 400;
+	sum = 0;
+}
+
+//document.write(locVal); //지역 변수를 밖에서 호출하여 Notdefined Error.
+console.log(gVal);//지역 변수를 밖에서 호출하여 에러.., 7번 라인에서 선언하게 될 경우 얘기가 틀려짐.
+//결론, 함수내에서 처음 선언된 변수는 var 여부와 상관없이 무조건 지역변수임.
+console.log(sum);
+</script>
+</head>
+<body onload="test();">
+<script type="text/javascript">
+a = 10;
+var b = 20;
+let c = 30;
+c= 40;
+
+function otherGValCase(){
+	var og = 10 + 20;
+	og2 = 10 + 20;
+}
+otherGValCase();
+//console.log(og);
+console.log(og2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>float 활용 예제</title>
+<!-- !!!!!!중요점 : float 적용시 우측에 붙을 컨텐츠의 마진은 반드시 float을 정의한 곳에서
+줘아 합니다. 또한 float 을 주게되면 이미지의 크기등의 변화시 자동으로 컨텐츠가 자동 정렬되는
+장점이 있습니다. positioning 을 하게되면 위치 경우가 발행시엔 내용이 겹치는 일이 발생될 수
+있습니다.
+ -->
+ 
+ <style type="text/css">
+ 	img.a{
+ 		float : left;
+ 		margin: 40px; /*우측에 붙을 컨텐츠의 마진 적용*/
+ 	}
+ </style>
+</head>
+<body>
+
+<img class="a" src="images/sunshine.jpg" width="160" height="120">
+<p>
+	오늘은 강의 후 첫 주말입니다. 모두 푹 쉬시고, 쉬다가 지치면 책도 보고하세요.
+</p>
+
+
+</body>
+</html>

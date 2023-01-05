@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementById().innerHTML</title>
+<script type="text/javascript">
+function proc(){
+	var obj = document.getElementById("target");
+	var forms = document.myform;
+	console.log(forms.length);
+	alert(forms[1].name);
+	
+	alert(forms);
+}
+</script>
+</head>
+<body>
+<form action="" name="myform">
+	<input type="text" id="target" name="text1">
+	<input type="submit" value="제출" onclick="proc();">
+</form>
+</body>
+</html>

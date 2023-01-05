@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+*{
+	padding: 0px;
+	margin: 0px;
+	
+}
+body{
+	border-color: #f3f1e9;
+
+}
+header{
+	height: 60px;
+	margin: 10px;
+
+}
+nav{
+	margin: 10px;
+	
+}
+
+nav ul{
+	list-style: none;
+	text-align: center;
+	border-top: 1px  solid red;
+	border-bottom: 1px solid red;
+	padding: 10px 0;
+	
+}
+
+nav ul li{
+		display: inline;
+		text-transform: uppercase;/*영문은 전부 대문자로*/
+		padding: 0 10px;
+		letter-spacing: 10px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+/*가상요소 style*/
+nav ul li a:hover{
+	text-decoration: underline;
+	
+}
+
+/*left 메뉴 style*/
+aside#left{
+	width: 175px;
+	margin-top: 20px;
+	float: left;
+
+}
+
+#left h4{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+		
+}
+#left ul{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #fff;
+	list-style: none;
+	text-indent: 15px;/*15px 만큼 들여쓰기*/
+		
+}
+#left ul li{
+	background: #3f3f3f;
+	line-height: 28px;
+	border-bottom: 1px solid #333;
+	
+}
+#left ul li a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+}
+
+#left ul li a:hover{
+	background: #d40203;
+	
+}
+#left ul li a:active{
+	background: #d40203;
+	
+}
+
+#main{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #464646;
+	overflow: hidden;/*이 속성은 컨텐트가 영역 밖으로 넘칠경우 보이지 말라는 속성입니다.*/
+	float: left;
+	width: 460px;
+	
+}
+
+#shopcart{
+	margin-bottom: 20px;
+	
+}
+#Login{
+	margin-top: 40px;
+}
+
+aside#right{
+	padding: 0px;
+	margin-left: 10px;
+	width: 200px;
+	float: left;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	clear: both;/*aside를 float 으로 배치시엔 반드시 footer 에서
+	상위에 적용된 float 속성을 모두 clear 해주세여.*/
+	background-image: url(images/footer_bg.gif);
+	background-position: top left;
+	background-repeat: repeat-x;/*x 축으로만 이미지를 반복하라는 의미입니다.*/
+	
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체 알아보기</title>
+</head>
+<body>
+<div id="con">
+	<img alt="" src="../TEACHERforder/cup-1.png" id="cup">
+</div>
+<script type="text/javascript">
+var cup = document.getElementById("cup");
+//특정 대상에 이벤트를 등록할때는 아래처럼 .이벤트종류를 지정하고
+//반드시 콜백메서드를 지정해야 합니다. 이래야 핸들링까지 되어집니다.
+//단, 콜백 메서드를 무명으로 정의하지 않으면, 반드시 () 를 제외한 함수 명만 지정해야합니다.
+//만약 ()까지 지정하면 즉시 실행 함수로 변경이 되어집니다.
+cup.onclick=changePic;
+cup.onmouseover=function(eve){
+	alert("이벤트 타입" + eve.type + "발생 위치 : " + eve.pageX + " : " + eve.pageY);
+	
+	
+};
+
+function changePic(eve){//eve가 브라우저가 던져주는 이벤트객체를 받는 Ref 변수로 사용됩니다.
+	alert("이벤트 타입" + eve.type + "발생 위치 : " + eve.pageX + " : " + eve.pageY);
+	
+	
+}
+
+
+
+
+</script>
+</body>
+</html>

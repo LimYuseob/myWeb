@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+아이디 : <input type="text" id="id" size="10">
+<button onclick="checkID();">check</button>
+
+<script type="text/javascript">
+function checkID(){
+	var id = document.getElementById("id").value;
+	//메뉴얼에서 문자열의 길이를 리턴하는 메서드를 찾아서
+	//입력된 값이 8 자리 이하면 알럿을 띄우세요.
+	if(id.length < 8){
+		
+		alert("8자리 이상으로 입력해주세요");
+	}
+	
+	
+}
+
+/*
+var str = "Like son, like father";
+//정규화 패턴을 match()에 적용하여 같은 문자열 값 찾아내기.
+result = str.match(/like/g);
+alert(result);
+
+str = "hello";
+for(let i = 0; i<str.length; i++){
+	alert(str.charAt(i));
+	
+}
+*/
+str = "one, two, three";
+arr = str.split(",");
+
+//for in 루프문..
+for(var x in arr){
+	val = arr[x];
+	alert(val);
+	
+}
+
+document.write(str.bold());
+document.write(str.strike());
+document.write("구신",str.link("https://www.google.com"));
+
+</script>
+</body>
+</html>

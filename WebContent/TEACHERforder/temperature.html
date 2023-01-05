@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<table border="3">
+<h1>온도 변환식은 ((celsius * 9.0 /5) + 32) 입니다.</h1>
+<h2>반복문을 이용한 섭씨온도에 대한 화씨온도 표기 하는 퀴즈 0<sup>0</sup>부터 10<sup>0</sup>까지 표현하세요. Table Tag 사용</h2>
+	<tr>
+		<th>섭씨온도</th>
+		<th>화씨온도</th>
+	</tr>
+	<script>
+	var celsius = 0;
+		for(celsius; celsius <=10; celsius++){
+			document.write("<tr><td>" + celsius +"</td><td>" + ((celsius * 9.0 /5) + 32) + "</td></tr>");
+		}
+	</script>
+</table>
+</body>
+</html>

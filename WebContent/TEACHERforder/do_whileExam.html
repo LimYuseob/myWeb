@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var i = 0;
+
+do{
+	let j = 1;
+	document.write("카운터 : " + i + " j: " + j + "<br>"); //j 를 let 으로 선언시 Cannot  Access j before initialezed 에러 유발됨
+	//var j = 1;
+	//let j = 1; 
+	i++,j++;
+}while(i<=10);
+document.write("블락 밖에서 확인 -->" + i + " : " + j); //!!! 왜 j 가 2만 나오는지 확인 시킬것, let 이라는 변수를 사용해서 j 를 써볼것--> 지역 변수를 밖에서 호출하여 not defined 오류
+</script>
+</body>
+</html>

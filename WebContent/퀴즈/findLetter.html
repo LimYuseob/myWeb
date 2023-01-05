@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var code = Math.round((Math.random()*127)+1);
+
+if(code < '0'){
+	alert("발생된 문자는 특수문자" + String.fromCharCode(code) + "입니다");
+}else if(code <= '47'){
+	alert("발생된 특수문자는" + String.fromCharCode(code) + "입니다");
+}else if(code => '48' && code <= '57'){
+	alert("발생된 숫자는" + String.fromCharCode(code) + "입니다");
+}
+else if(code => '58' && code <= '64'){
+	alert("발생된 특수문자는" + String.fromCharCode(code) + "입니다");
+}
+else if(code => '65' && code <= '90'){
+	alert("발생된 대문자는" + String.fromCharCode(code) + "입니다");
+}
+else if(code => '91' && code <= '96'){
+	alert("발생된 특수문자는" + String.fromCharCode(code) + "입니다");
+}
+else if(code => '97' && code <= '122'){
+	alert("발생된 소문자는" + String.fromCharCode(code) + "입니다");
+}
+else if(code => '123' && code <= '127'){
+	alert("발생된 특수문자는" + String.fromCharCode(code) + "입니다");
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 배열</title>
+</head>
+<body>
+
+<h3>연관배열 예제</h3>
+<form action="" name="myform">
+	<input type="text" name="a0"><br/>
+	<input type="text" name="a1"><br/>
+	<input type="text" name="a2"><br/>
+	<input type="text" name="a3"><br/>
+	<input type="button" value="초기화" onclick="init();">
+</form>
+<script type="text/javascript">
+var arr = [];//빈배열 선언..
+alert(typeof(arr));
+alert(arr);
+alert(arr.length);
+arr = 'hi';
+//java 와는 틀리게 값이 flexible 하게 대입된다...아래는 문자하나씩을 각 index 에 대입시키는 예..
+alert(arr[0]);
+alert(arr[1]);
+alert(arr.length);
+
+//배열객체로 생성.. 배열을 버리고 새롭게 생성한다.
+arr = new Array(1,2,3);
+alert(arr[0]);
+alert(arr[1]);
+alert(arr[2]);
+
+//리터럴로 생성.. 배열의 다른 생성식..
+arr = ['a','b','c'];
+alert(arr[0]);
+alert(arr[1]);
+alert(arr[2]);
+
+//서로 다른 타입을 요소로 갖을수 있다.
+arr = new Array();
+arr[0] = 'App';
+arr[1] = new Date();
+arr[2] = 3.14;
+
+for(i = 0; i<arr.length; i++){
+	document.write(arr[i] + "<br/>");
+}
+
+
+//연관배열.다른 언어와 틀리게 key를 이용해서 Value 를 저장할 수 있다. 즉 index 대시 key 를 이용해서 추출 할 수 있다는 의미.
+//사용예..폼이나 HTML 요소의 name 에 접근하여 값을 얻어낼수 있다.
+function init(){
+	for(var i = 0; i<myform.length; i++){
+		document.myform["a" + i].value = i;
+	}
+}
+
+
+</script>
+</body>
+</html>

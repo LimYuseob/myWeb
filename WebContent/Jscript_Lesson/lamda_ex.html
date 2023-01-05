@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//[let,const]
+/*
+varName = () =>{console.log("hi"); return "Greetiongs";}
+alert(varName());
+
+let varName2 = () => "다시인사";
+alert(varName2());
+
+var varName3 = user => {return user;}
+alert(varName3("임유섭"));
+
+var varName4 = (user,telNum) => {return (user + telNum);}
+alert(varName4("임유섭","112"));
+*/
+// 자바스크립트 호이스팅 : 변수나 함수를 끌어올려주는 개념..즉 일반함수인 경우 함수를 후 정의후
+//선호출 해도 문제가 되지않는 이유가 이것때문입니다.
+/*
+f1();
+//f2();
+function f1(){
+	alert("f1");
+	
+}
+const f2 = function(){
+	alert("f2");
+	
+}
+f2();
+*/
+target = "Merry X-mas ALL";
+/*function t1(){
+	alert(this.target);
+	
+	
+}
+
+var obj = {//일회성 객체 정의 코드
+		target : "Merry X-Mas ME",
+		action : t1
+		
+		
+}
+
+obj.action();
+*/
+const t2 = () => {
+	alert(this.target);
+	
+}
+const obj2 ={
+		target : "Merry X-Mas Me",
+		action : t2
+		
+}
+obj2.action();
+
+
+</script>
+</body>
+</html>

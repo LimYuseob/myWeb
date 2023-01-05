@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>whatsJava</title>
+</head>
+<body>
+<p>자바스크립트 표준 : ECMA 표준</p>
+<h3>자바스크립트 특징</h3>
+<ul>
+	<li>인터프리터 언어</li>
+	<li>동적 Typing : 자료형 선언 없이 사용가능</li>
+	<li>구조적 언어 : 조건, Loop 등 제어구문 사용가능</li>
+	<li>객체 기반 : 전적인 객체 지향언어임</li>
+	<li>함수형 프로그램 : 함수는 자바스크립에서 일급 객체..따라서 함수는 속성과 .call() 같은 메서드 보유</li>
+	<li>프로토타입-기반 : 상속을 위해 클래스 개념 대상에 프로토타입 사용.</li>
+</ul>
+ex1>js.html
+<h3>자바스크립트 용도</h3>
+<ul>
+	<li>이벤트 Driven 구현</li>	
+	<li>Jquery 등을 이용한 크기, 색상, Text 등의 동적인 변경</li>
+	<li>게임이나 에니메이션 등 Interactive 한 컨텐츠 구현
+	<li>사용자의 입력값 Validation</li>	
+</ul>
+ex2>js1.html
+
+<h3>자바스크립 미래</h3>
+<ul>
+	<li>Node.js : 서버프로그래밍이 가능한 서버-사이드 바스크립트. 이벤트 구동형이며, 비동기적 입출력을 채택, 병렬처리 코어가 많은 컴에서 효율적이다.</li>
+	<li>JQuerty : 자바스크립트 Lib 이며, 모바일 JQuery 등을 통하여 모바일에서 인기</li>
+	<li>JSON : 자바스크립트 객체 표기법(JavaScript Object Notaion) : 개발 언어에 독립적인 데이터 형식으로, XML 을 대체할 정도로 인기이다.</li>
+</ul>
+
+<h3>자바스크립 위치</h3>
+<ul>
+	<li>내부 자바스크립트 : <script></script> 사이에 위치..head 절에 정의를 많이 한다.</li>
+	<li>document.write() 는 문서의 내용을 추가하는 메서드, 호출되는 순서를 확인해보자..ex3>docCaution.html,docTagStringEx.html</li> 
+	<li>외부 JScript : CSS 처럼 외부에 정의후 import 해서 사용가능함..일반적으로 여러 웹페이지에서 공통적으로 사용되는 코드를 정의. 확장자는 .js. 사용하기 위해서는 scr 속성으로 파일이름 지정한다.
+		ex4>js_ext.html
+	</li>
+	<li>인라인 : 태그 내부에 이벤트 속성으로 삽입하는 형태 ex>js_inline.html, js_inline1.html</li>
+	<li>스크립트 해석순석 : html -> head -> body -> style 분석 -> 스크립트 수행 ex>scriptProc.html</li>
+</ul>
+
+<h3>기본 입출력 방법</h3>
+<ul>
+	<li>alert('내용')</li>
+	<li>confirm('내용')</li>
+	<li>prompt('내용',"")</li>
+	<li>ex>inputEx.html</li>
+</ul>
+
+<h3>웹브라우저 개발자 도구 사용(f12)</h3>
+<ul>
+	<li>오류 내용 및 위치를 확인 후 Debug 한다. ex>synErr.html</li>
+	<li>코딩 규칙(자바와 같음)</li>
+</ul>
+
+
+<h3>변수(Variable) : 변하는 값을 담는 수</h3>
+<ul>
+	<li>변수는 선언(declared, assign, initialized) 로 구분할수 있다.</li>
+	<li>var(키워드) name</li>
+	<li>대소문자를 구분하고 공백은 다른 변수로 인식...따라서 _ 를 이용해 단어 연결..</li>
+	<li>변수를 이용한 간단한 출력 ex>varExam.html</li>
+</ul>
+
+<h3>자료형(typeof) : 데이터를 처리하는 자료형태</h3>
+<ul>
+	<li>수치(Number),문자열객체(String),논리(boolean t/f),배열(array),객체(Object),undefined,null</li>
+	<li>개발자 도구의 콘솔에 typeof 입력 후 값 입력, 결과 확인해보자.</li>
+	<li>수치형 : var x = 123e3(123,000), z = -123e-3(0.123)))</li>
+	<li>문자열의 조합시 '" 를 번갈아 써야함..ex>var s = "그는 '슈퍼맨' 이라고 불린다"; 자료형 예제 ex>var_Exam.html</li> 
+	<li>배열(array) : 하나이상의 값을 가지는 index 가 있는 그룹. var arr = [val1,val2,"val3"]; ex>arrExam.html
+	<li>parseInt() 보여주기. ex>js_parse.html, js_parse1.html(계산기예제) 
+</ul>
+<h3>연산자(최(.,[],new),(), 선행(++,--), 단항(!,~,+,-,typeof,), 산술(*,/,%,+,-),쉬프트(<<,>>,>>>),관계(==,!=, ===, !==, <,>,...), 논리(&,|,&&,||), 삼항(조건 ?v1 : v2), 배정대입(+=,..),후행(++,--))</h3>
+<ul>
+	<li>console 창에서 ===,!==, ==, != 를 비교해보자.</li>
+</ul>
+
+<h3>조건문 알아보기(if(),else if(),(n)else if(조건),else,switch~case)</h3>
+<ul>
+	<li>simple if Exam :  ex>axle.html, axle1.html</li>
+	<li>switch~case Exam : ex>switch.html, ifQuiz.html</li>
+</ul>
+<h3>반복문 알아보기(for, while)</h3>
+<ul>
+	<li>for exam : ex>for1.html, for2.html(퀴즈로 내보기), for3.html, temperature.html(퀴즈)</li>
+	<li>for In loop 는 객체에 적용되는 구문이다. 형식은 for(변수명(속성의 idx) in 대상객체) : 대상 객체의 속성의 끝까지를 모두 접근하여 변수에 자동으로 담아준다. ex>forInLoop.html</li>
+	<li>while(조건식){조건식 결과가 true 시에만 실행되는 구문} : 일반적으로 채팅등의 루프 범위가 지정되지 않은 상태에서 사용된다. ex>factorial.html</li>
+	<li>do{수행구문}while(조건식); : while 은 조건을 먼저 확인후 반복 하지만 이건 먼저 수행후 조건을 본다. 반드시 while(); <- 넣어야한다. ex>do_whileExam.html</li>
+	<li>loop 제어 키워드 : continue, break; 즉석예제 적용함.</li>
+</ul>
+<h3>함수(function) : 수행할 로직을 묶은 덩어리. 필요에 따라 파라미터를 선언 할 수 있으며, 실행후 return 여부를 지정할 수 있다.</h3>
+<ul>
+	<li>var, let, const, var_less 변수 : var 를 사용한 변수는 선언 위치에 따라 전역, 지역으로 구분될 수 있다. 함수내에서 var 없이 선언된 변수는 선언 위치에 따라 전역 or 에러가 될 수 있다. ex>letExam.html</li>
+	<li>위 예제에서 봤듯이 지역변수로 선언 하고 싶으면 함수 내에서 var 를 이용해 처음 선언하고, 전역인 경우엔 코드블락 처음에 선언하는게 좋다.</li>
+	<li>함수의 파라미터(0 or p1,p2,pn....) 호출시엔 값을 주지 않아도 호출된다. 갯수를 틀리게 주면 순서대로 매핑된다. ex>funcParam.html</li>
+	<li>익명함수(Anonymous function) : 말그대로 함수명이 없는 함수이다. 이 함수는 일회성인 경우가 일반적이다. 또한 메모리를 사용하지 않기에 메모리 관리에 효율적이다. <br/>일반적으로 var varName = functioni(){return....} 식으로 작성한다. 이런 함수는 varName 자체가 함수가 된다. ex>anonyFuncExam.html</li>
+	<li>즉시실행함수 : 정의 목적으로는 한번만 수행하고 더이상 사용하지 않을 경우 사용된다. sytax> (function([params]){statement}([v1,v2])); ex>js_Rfunc.html</li>
+	<li>람다함수 : 일종의 무명함수와 같다. 표현식으로 => 를 사용하기에 화살표 함수라고도 한다. syntax>[const] varName = ([params1,params2...]) => [{구현부}] ex>js_Lambda.html</li>
+	<li>document.write() 사용시 주의 사항 : 페이지가 모두 로드된 이후 호출하면 내용을 다시 쓴다. ex>js_write.html</li>
+</ul>
+
+<h4>JavaScript 객체 생성 및 사용 : 종류로는 내장객체(built in Object), 사용자객체(Custom obj) 로 구분된다.</h4>
+<ul>
+	<li>객체내의 동작은 각각 변수(Property), 와 함수(method)로 표현된다.</li>
+	<li>내장 객체의 예 : document</li>
+	<li>새로운 객체를 생성하는 방법 : 1. 객체를 상수로 부터 직적 생성(일회성)  2.생성자를 이용하여 정의하고 new 키워드를 통해 객체의 인스턴스를 생성하는 방법</li>
+	<li>객체 상수로부터 생성법 ex>definedObj1.html</li>
+	<li>생성자 이용 생성 ex>object_Car.html</li>
+	<li>ProtoType : 정의한 클래스의 메서드를 생성된 객체에서 갖는 형식이 아닌, 클래스에 두고 공유하게 하는 자바 스크립트 내부 객체 Syntax: Class.Prototype.공유메서드명 = functioin(){}.. ex>protoType.html</li>
+	<li>JScript 내장 객체 : Object, Date, Numbr, String, Math, Array 등...</li>
+	<li>Object : 최상위 계층의 부모 객체..대표적으로 toString() 을 오버라이드 할 수 있다.. ex>objectToStringEx.html</li>
+	<li>Date 객체 : 시간 관리 내장객체. y,m(0부터),date,hour[,min,sec,ms] 으로 생성자를 호출하여 객체 생성한다. 단 월은 배열로 정의 되어서 반드시 월-1 을 해줘야함.. ex>obj_Date.html, obj_Date2.html, differDate.html, clock.html</li>
+	<li>Number : 수치형 값을 Wrapping 객체. 객체를 생성할수도 있고, 기타 메서드를 이용해서 실수의 자릿수 제어도 가능하다. ex>NumberEx.html</li> 
+	<li>String : 문자열 객체. length 속석 및 다양한 메서드를 가지고 있음. <a href="http://w3schools.com/jsref/jsref_obj_string.asp">참조</a> ex>StringExam.html</li>
+	<li>Math : 수학작업 객체..다양한 메서드를 가지고 있음..Java 메뉴얼 참고.. round() 반올림정도..</li>
+	<li>Array : 배열객체..length 속성 및, concat(val1,[val2]...) 배열의 끝에 추가, indexOf() 배열값찾기, push(val),pop() : stack, shift(),unshift() : Queue ex>arrayObjEx.html</li>
+</ul>
+
+<h4>DOM : HTML 문서의 요소를 변경하며, 이벤트와 연동하도록 학습한다.</h4>
+<h4>BOM : Browser Object Model(브라우저 내장 객체 모델을 말한다.) --> window --> document, frames[], history, location, navigator, screen 으로 계층구성이 되있으며<br>
+	document 하위로는 form[], anchors[],layers[], images[] 로 계층을 이루고 있다.
+</h4>
+<ul>
+	<li>DOM NODE 의 종류 : DOCUMENT NODE(DOM 트리의 루트 노드, HTML 문서를 나타낸다. 내부적으로는 window.document 이며, window 는 생략 가능하기에 document 로 사용함)</li>
+	<li>Element Node : HTML 요소를 나타내는 노드..body, a, p, script, style, html, h1 등을 가리킨다.</li>
+	<li>Atrritube Node : 속성노드..즉 clss="myClass" id="myId" 등..</li>
+	<li>Text Node : 요소내의 텍스트를 나타낸다.</li>
+	<li>HTML 요소 찾기(id) : document.getElementById("id") Element Obj return --> 요소 자체를 반환하기 때문에 innerHTML 을 이용해서 속성을 가져와야 한다. 단, 입력요소인 경우 value 를 이용 값 얻는다. ex>get_elem.html </li>
+	<li>HTML 요소 찾기("tagName") : document.getElementsByTagName("tagName") --> 모든 요소를 찾아서 배열로 리턴. Think!!!!! 특정 노드가 Text data 를 가지게 될 경우 해당 Text 는 해당 요소의 첫번째 자식 노드로 저장됨.. ex>getElemByTag.html</li>
+	<li>HTML 요소 찾기("className") : document.getElementsByClassName("className") --> 모든 class 요소를 찾아서 배열로 리턴.</li>
+	<li>HTML 요소 찾기("className") : document.getElementByClassName("className") --> 지정된 class 요소를 찾아서 리턴.</li>
+	<li>HTML 요소 찾기("Node.quertySelector('선택자')") : querySelector("#heading") --> "id = heading" 요소를 찾아서 리턴.</li>
+	<li>HTML 요소 찾기("Node.querySelectorAll('선택자(#id, or .className) or Tag')") : quertySelector(".cls") --> 클래스 이름이 cls 인  요소 모두  찾아서 노드 리스트 리턴.</li>
+	
+	<li><strong>DOM Tree 순회 : Node에 직접 Access 하는 벙법(childNodes[], nextSibiling[], parentNode[] 등을 이용한다.)</strong>
+		<ul>
+			<li>childNodes : 한 요소의 모든 자식 요소에 접근 가능하다. 배열 리턴</li>
+			<li>firstChild : childNodes 의 첫 번째 자식 노드 반환..childNodes[0] 과 같다.</li>
+			<li>lastChild : childNodes 배열의 마지막 자식 노드 반환..childNodes[childeNodes.lenght -1] 과 같다.</li>
+			<li>parentNode : 현재 Node 의 부모 노드 리턴.</li>
+			<li>nextSibiling : 현재 Node 의 다음 형제 노드 리턴.</li>
+			<li>priviousSibiling : 현재 Node 의 이전 형제 노드 리턴.</li>
+		</ul>
+	</li>
+	<li>HTML 요소의 동적 변경 : DOM 을 이용하여 리로드 하지 않고도 동적 변경을 할 수 있다.</li>
+	<li>요소의 내용 변경(innerHTML), 속성 변경(src 등..), 스타일(style) 변경등을 할 수 있다.</li>
+	<li>innerHTML : 요소의 시작 태그와 종료 태그 사이에 놓여지 모든 HTML 코드와 Text 를 의미한다. 만약 요소내에 다시 Tag가 적용되어진 경우 모두 return 시킨다. ex>dom_Elem_mod.html</li>
+	<li>innerTetxt : 요소의 시작 태그와 종료 태그 사이에 놓여진 모든 Text 만을 의미한다. ex>dom_Elem_mod2.html</li>
+	<li>Node 의 속성 get & set : document.getElementById("id").속성 (= value) OR getArribute(), setAttribute(val) ex>srcExam.html, setArrt.html(this 및 이벤트 핸들러 정의예제)</li>
+	<li>요소의 style 정의 : style 객체(Node). 모든 속성 확인은 <a href="https://www.w3schools.com/jsref/dom_obj_style.asp" target="_blnak">w3schools.com</a>참조해보자.
+	<li>Dom 에서 노드 추가,삭제 : ex>nodeView.html(노드확인), 모든 HTML 태그는 요소이며, HTML  의 텍스트 내용은 자식노드이다. 태그의 속성은 자식 노드인 속성(Atrribute) 노드이다.<br>
+		요소(element) node 생성 : document.createElement(노드명-"p") --> document.createTextNode("Value") --> 자식을 부모에 연결(부모노드.appendChild(자식노드)) -> 부모노드를 기존 노드의 자식으로 연결.
+		ex>makeNewNode.html, 
+	</li> 
+	<li>
+		속성값이 있는 Element 추가 : 노드추가(var imgNode) --> 속성노드추가(createAtrribute(속성명)) --> 속성노드에 속성값 대입(attNode.value = 'value')  --> imgNode 에 속성 노드 연결(imgNode.setAttributeNode(속성노드))<br>
+		추가할 대상 부모 노드에 신규 노드 추가하기..parent.appendChild(imgNode).. ex>makeAttrNode.html 
+	</li>
+	<li>inputTag 의 내용을 노드로 표현 하기 및 추가 순서 바꿔보기 : nodeCreate.html</li>
+	<li>노드삭제 하기(removeChild(target child)) --> 반드시 부모노드에서 삭제해야함..따라서 삭제될 노드의 부모노드를 먼저 찾고(node.parentNode(속성)), 이후 삭제 해야함.  ex></li>
+</ul>
+<h4>DOM & Event Handling</h4>
+<ul>
+	<li>이벤트 핸들러가 간단할 경우 DOM 에 무명콜백 함수로 바로 연결하기. syntax>event=function(){}.. ex>evt1.html</li>
+	<li>정의한 함수 호출하기. syntax>onevent=func(); function(){}.. ex>evt2.html</li>
+	<li>이벤트 객체(event) : 이벤트가 발생시 자동으로 생성 되는 객체. 여러 속성을 적절히 이용할 수 있다..  ex>evtObj.html</li>
+	<li>이벤트 리스너(Listener) 를 이용한 하나 이상의 DOM 요소에 이벤트 연결하기 : event 객체와, 리스너를 이용 하나이상의 요소 또는 한 요소에 다중의 이벤트 연결이 가능하다.<br>
+	syntax>element.addEventListener(이벤트,핸들러함수,캡처여부(default false(버블링) : 캡처링은 부모요소 --> 자식으로 이벤트 전달, bubbling 은 자식 --> 부모에게 이벤트 전달)) ex>evtListener.html 
+	</li>
+	<li>onload & onunload 이벤트 : 페이지가 로드되는 시점 및 닫히는 시점에 발행하는 이벤트이다..보통 초기화 작업등을 onload 에 작성한다. ex>otherEvent.html</li>
+	<li>게산기 예제.. ex>evt_calculator.html, evt_calculator_Adv.html</li> 
+</ul>
+<h4>BOM 객체 알아보기.</h4>
+<ul>
+	<li>window : 최상위 객체. 창이 열릴때무다 하나씩 생성됨. alert(), prompt(), confirm(), focus(), open()  등이 대표적 메서드이고, 속성은 참조할것.</li>
+	<li>open() : 팝업창등을 구성할 때 사용되는 메서드. 속성값으론 경로(표시한 바닥 문서나 사이트의 URL), 창이름(이름을 지정시, 이름을 호출하여 해당 창에서 바닥만 바꿔 표시할 수 있다.), 참옵션(w/h,left/top 등 창의 표시에 관련되 속성)등이 있다.</li>
+	<li>popup.html, notice.html, popup-check.html, setTimeout(수행함수), 지정시간) : 딱 한번만 호출됨.(bom_settimeout.html) setInterval(함수,지정시간)-clearInterval(함수 변수)(bom_setinterval.html)
+	<br>moveTo() -> 절대위치 이동, moveBy() --> 상대위치 이동.(bom_move.html)
+	</li>
+	<li>navigator : 브라우저의 정보를 담당하는 객체. 배열로 구성되어 있다. ex>bom_nav.html</li>
+	<li>location : 현재 URL 에 대한 정보를 가지고 있으며, 대표적 메서드로는 reload(), replace() 가 있다. ex>bom_location.html, opener 를 이용한 예제. main_result.html</li>
+	<li>form : 데이터 접근법 --> id 속성은 페이지의 요소를 식별, name 속성은 폼 내부에서의 필드를 식별함(formName 을 통해 식별함) --> 리턴값은 배열이고, 각 배열 요소는 form["name"] 으로 접근가능하다. ex>formEx1.html</li>
+	<li>일반적은 form 내부의 검증법 : ex>공백검증 : ex>form_val_empty.html...... Data 길이 검증 ex>form_val_leng.html</li>
+	<li>정규식 :  특정 규칙을 가지고 있는 문자열을 표현하는 수식..많이 사용되나 pattern 만들기가 좀 복잡하다..<br>
+		ex>^(문자열시작)[0-9](0~9까지의 문자중 하나)+(한번이상의반복)abc(문자열)$(문자열의끝) : 메타문자의 예..
+		ex>자바스크립트의 정규식은 항상 /정규식/ 형태로 지정해야 하며, 내부적으로는 RegExp(Regular Expression) 객체에 의해 표현된. 스크립트에서는 정규식을 초기화 하는 것만으로도 객체가 생성된다.
+	</li>
+	<li>
+		메타문자<br>
+		^(시작) : 문자열의 시작을 표시<br>
+		$ 끝 : 문자열의 끝을 표시<br>
+		. 문자 : 한개의 문자와 일치<br>
+		\d 숫자 : 한개의 숫자와 일치<br>
+		\w 문자와 숫자 : 한개의 문자나 숫자와 일치<br>
+		\w 공백 문자 : 공백,탭,줄 바꿈, \r(캐리지리턴) 문자와 일치<br>
+		[] 문자 종류, 범위 : [abc]는 a 또는 b 또는 c 를 나타낸다. [a-z] 는 a 부터 z 까지 중의 하나, [1-9] 는 1부터 9까지중 하나..<br>
+		
+		ex><br>
+		/abc/ : 정확히 abc 와만 일치<br>
+		/./ : 한 자리의 문자..예를 들어 "A","1","$"<br>
+		/\d\d\d/ : 3자리 숫자, 예를 들어 "001", "123"<br>
+		/[a-z]/ : a 부터 z 사이의 한글자와 일치<br>
+		/\w/ : 한자리 문자나 숫자..예를 들어 "8","a"<br>
+		/^\d/ : 문자열의 시작이 한 자리 숫자..예 "123","2nd"<br>
+		/\d\d$/ : 끝에 두자리의 숫자가 있는 문자열,,예 "car01","produce10"<br>
+		
+		수량 한정자(문자의 반복 수를 나타내는 기호)<br>
+		* : 0 회 이상 반복 예."a+" 는 "","a","aa","aaa" 를 나타냄<br>
+		+ : 1 회 이상 반복 예."a+" 는 "a","aa","aaa" 를 나타냄<br>
+		? : 0 또는 1회 : "a?"는 "","a" 를 나타냄.."a","aa","aaa"<br>
+		{m} : m회..예. a{3} 은 'aaa'만 만족<br>
+		{m,n} : m회 이상 n회 이하..예>a{1,3} -->'a','aa','aaa'<br>
+		(ab) : 그룹화 예>(ab)+ 는 "","ab","abab" 등을 나타낸다.<br>
+		
+		ex><br>
+		/.+/ --> 어떤 문자가 1회 이상 반복<br>
+		/\w*/ --> 어떤 문자나 숫자로 이루어진 문자열<br>
+		/^[1-9][0-9]*$ --> 처음 숫자가 0이 아니고 전체가 숫자(가격같은경우)<br>
+		/^\d[6]-\d[7]$ --> 중간에 "-" 이 있는 주민번호<br>
+		/(Good)?Bye/ --> GoodBye or Bye..
+		
+		ex>form_reg_exp.html, form_reg_exp1.html 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</li>
+	
+	
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

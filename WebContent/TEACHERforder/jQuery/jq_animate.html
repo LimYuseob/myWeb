@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#start").click(function(){
+		$("#dog").animate({left: '300px', opacity: '0.5', width:'150px'},10*1000);	
+	});
+	$("#stop").click(function(){
+		$("#dog").stop();//에니메이션 중지	
+	});
+});
+</script>
+</head>
+<body>
+
+<img alt="" src="pome.png" width="120" height="100" style="position: relative;" id="dog"><br>
+<button id="start">animate()</button><button id="stop">stop</button> 
+</body>
+</html>

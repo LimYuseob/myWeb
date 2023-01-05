@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//생성자를 이용하여 객체 클래스 정의..모든 속성과 메서드를 생성자(function clsName)내에 정의 한다.
+
+function Car(model, speed, color){
+	this.model = model;
+	this.speed = speed;
+	this.color = color;
+	
+	this.brake = function(){
+		this.speed -= 10;
+	}
+	this.accel = function(){
+		this.speed += 10;
+	}
+}
+
+myCar = new Car("Bmw", 50, 'blue');
+yourCar = new Car("Benz", 50, 'red');
+
+myCar.accel();
+
+document.write(myCar.toString());
+document.write(myCar.speed);
+document.write(yourCar.speed);
+
+
+
+
+
+/**
+ * 정의한 객체에 속성과 메서드를 동적으로 추가하기..생성자 함수는 필요치 않다.
+ * 정의법은 속성 = value, 메서드 = function() 으로 추가한다.
+ */
+myCar.turbo = true;
+myCar.showModel = function(){
+	alert("모델은 " + this.model + " 터보 여부는 " + this.turbo);
+}
+
+
+myCar.showModel();
+
+
+
+
+
+
+
+
+ 
+ 
+</script>
+</body>
+</html>

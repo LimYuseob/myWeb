@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for 구문을 이용한 heading 출력해보기</title>
+</head>
+<body>
+<script type="text/javascript">
+//h1 ~ h6 태그를 이용해서 내용을 출력해봅니다.
+var i = 1;
+for(i; i<=6; i++){
+		document.write("<h" + i + "> header" + i + "</h" + i + ">");
+
+}
+
+
+</script>
+<h2>for 구문을 이용한 테이블</h2>
+<table>
+	<tr>
+		<th>
+			for루프변수의 값
+		</th>
+	
+	
+	</tr>
+
+<script>
+	
+	
+	var dan = 2;
+	var result;
+	for(var i = 0; i<=9; i++){
+		
+		result = dan * i;
+		document.write("<tr><td>"+ dan + "*" + i + "=" + result + "</td></tr>") //2 * 1 = 2
+		
+		
+	}
+</script>
+
+
+
+
+
+</table>
+
+
+</body>
+</html>

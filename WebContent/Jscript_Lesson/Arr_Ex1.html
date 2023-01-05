@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+</head>
+<body>
+<script type="text/javascript">
+//배열 생성법.1
+/*
+var arr = [];
+alert(typeof(arr));
+alert(arr.length);
+
+//배열에 값을 넣어볼게요. = 연산자를 이용하면 0번 index 를 생성후 넣어줍니다.
+//즉 순차적으로 값이 들어갑니다.
+
+arr = 'hi';
+alert(arr.length);
+
+arr[0]
+alert(arr[0]);
+
+//배열 생성법.2
+
+arr = new Array(1,2,3);
+alert(arr.length);
+
+//배열 생성법.3
+arr = ['가','나','다','라'];
+alert(arr.length);
+*/
+arr = new Array();
+arr[0] = '이건문자열';
+arr[1] = new Date();//이건 시간을 관리하는 객체
+arr[2] = 2;
+
+for(let i = 0;i< arr.length; i++){
+	document.write(arr[i] + "<br>");
+
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+//Singlegon 방식..= 을 이용해서 클래스 정의, 모든 속성과 메서드는 , 로 구분..클래스 {} 끝에는 반드시 ; 넣을것. 
+
+var myCar = { 
+	model : "Bmw",
+	speed : 60,
+	color : "blue",
+	
+	brake : function(){
+		this.speed -= 10;
+	},
+	accel : function(){
+		this.speed += +10;
+	}
+};
+
+alert(myCar.model);
+myCar.accel();//Speed Up...메서드 호출..
+alert(myCar.speed);
+
+
+//추가로 객체를 생성하려면 동일한 코드 반복해야함..
+</script>
+</body>
+</html>

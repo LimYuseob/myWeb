@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div.out{
+	width: 200px;
+	height: 60px;
+	background-color: beige;
+	}
+</style>
+<script type="text/javascript" src="JQuery/jquery-3.6.2.min.js"></script>
+</head>
+<body>
+<div class="out">
+<p>여기에 마우스 오버하세요</p>
+<p></p>
+
+</div>
+<script type="text/javascript">
+var i =0;
+
+$("div.out").mouseover(function(){
+	$("p:first",this).text("mouser over");
+	$("p:last",this).text(++i);
+	
+	
+})
+</script>
+</body>
+</html>

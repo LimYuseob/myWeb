@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>두개의 날짜 비교하기</title>
+
+<script type="text/javascript">
+//구매후 30일 지난 상품 반품 불가..예시
+function checkDate(){
+	var s = document.getElementById("pdate").value;
+	alert(s);
+	var pdate = new Date(s);
+	var today = new Date();
+	var diff = today.getTime() - pdate.getTime();//Millisec 으로 리턴
+	var days = Math.floor(diff/(1000 * 60 * 60 *24));//하루단위로 변환
+	if(days > 30){
+		alert("교환 기간이 지났음");
+	}
+}
+
+</script>
+</head>
+<body>
+구입날짜 :
+<input type="date" id="pdate">
+<button onclick="checkDate();">검사</button>
+</body>
+</html>

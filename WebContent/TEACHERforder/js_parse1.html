@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple Calculator</title>
+<script>
+function calc(){
+	var x = document.getElementById("x").value;
+	var y =document.getElementById("x").value;
+	
+	var sum;
+	
+	sum = parseInt(x) + parseInt(y);
+	document.getElementById("sum").style.backgroundColor='gray';
+	document.getElementById("sum").value = sum;
+}
+</script>
+</head>
+<body>
+<form action="" name="myform" method="post">
+	<label for="fir">첫번째 점수 : </label>
+	<input type="text" name="fir" id="x"><br/>
+	<label for="sec">두번째 점수 : </label>
+	<input type="text" name="sec" id="y"><br/>
+	<label for="sum">합계 : </label>
+	<input type="text" name="sum" id="sum"><br/>
+	
+	<input type="button" value="계산하기" onclick="calc();">
+</form>
+</body>
+</html>

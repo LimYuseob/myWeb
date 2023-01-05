@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function Point(xpos, ypos) { //Point 생성자 함수 정의
+	this.x = xpos;
+	this.y = ypos;
+	
+	//아래는 원점으로부터 거리를 계산하는 함수..
+	//아래처럼 정의시 모든 객체가 메서드를 각자 갖는 형태가 된다.비 효율적이다.
+	/*
+	this.getDistanc = function(){
+		return Math.sqrl(this.x * this.x + this.y * this.y);
+	}*/
+}
+//공유될 메서드를 Prototype 객체에 연결한다.
+Point.prototype.getDistance = function (p){
+	return Math.sqrt(this.x * this.x + this.y * this.y);//root 을 리턴하는 sqrt..
+}
+
+var p1 = new Point(10,20);
+var d1 = p1.getDistance();
+var p2 = new Point(10,30);
+var d2 = p2.getDistance();
+
+document.write(d1 + "<br/>");
+document.write(d2 + "<br/>");
+
+//추가로 아래와 속성또한 공유 시킬수 있다..
+Point.prototype.shared = 10;
+
+
+
+</script>
+</body>
+</html>

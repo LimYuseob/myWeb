@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+function a(){
+	//alert("이건 a 함수의 내용입니다.");
+	b();
+}
+function b(){
+	let bc = 10;//지역변수
+	alert("이건 b 함수의 내용입니다.");
+	
+	
+}
+function plus(a,b){//더하기 함수
+	result = a + b;
+	alert("두수의 합은 " + result);
+	
+	
+}
+
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<input type="button" value="눌러보세요" onclick="a();">
+<script type="text/javascript">
+plus();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showAlert() {
+        	//setTimeout : 지정된 시간후 딱 한번만 호출됨.
+            setTimeout(function () { alert("setTimeout()을 사용하여 표시됩니다.") }, 3000);
+        	//setTimeout(function () { location.reload(); }, 1000);
+        }
+    </script>
+</head>
+<body onload="alert('dd')">
+    <p>버튼을 누르면 3초 후에 경고 박스가 화면에 표시됩니다. </p>
+    <button onclick="showAlert()">눌러보세요</button>
+</body>
+</html>

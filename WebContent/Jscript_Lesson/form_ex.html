@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*function myfunc(f){
+	var id, pass;
+	
+	id = f.id.value
+	pass = f.pass.value;
+	
+	if(pass.length < 6 || pass.length > 13){
+		alert("암호는 7 ~ 12 사이여야 함..");
+		return false;
+	}	
+	
+}
+*/
+function myfunc(elem,min,max){
+	var s = elem.value;
+	if(s.length >= min && s.length <= max){
+		return true;
+		
+	}else{
+		alert(min + "문자와" + max + "문자 사이로 입력해.");
+		elem.focus();//해당 요소에 자동으로 포커싱됨.
+		return false;
+		
+	}
+	
+	
+}
+
+</script>
+</head>
+<body>
+<form action="#" method="get" onsubmit="myfunc(this);return false;">
+	
+	이름(6~8문자) : <input type="text" id="name">
+	<input type="button" onclick="myfunc(document.getElementById('name'),6,8)" value="확인">
+
+
+	ID : <input type="text" id="id" name="id"><br>
+	Pass : <input type="password" id="pass" name="pass">
+	<input type="submit" value="전송하기">
+	</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>간단한 계산기 만들기</title>
+<script type="text/javascript">
+function calc(){
+		//변수 fir.sec.sum 이라고 선언하세요.
+		//DOM 객체에서 특정 요소의 값을 추출하는 코드는 아래와 같아요.
+		//document.getElementByid("id").value; 이 코드를 사용해서
+		//파라미터로 찾고자 하는 id 값을 넣어주면 해당 값이 리턴됩니다.(value 라는 속성때문에)
+var fir = document.getElementById("fir").value;
+var sec = document.getElementById("sec").value;
+var sum = document.getElementById("sum").value = parseInt(fir) + parseInt(sec);
+		//id 가 sum 인 요소(Element 에 배경색을 'gray' 로, 더한 값을 추출시키세요)
+		//참고로 document.getElementByid("id").value 를 그대로 응용하면 됩니다.
+		document.getElementById("sum").style.backgroundColor = 'gray';
+		//sum 요소의 배경색이 blue로 바뀌는 코드입니다.
+}
+</script>
+</head>
+<body>
+<form action="" name="myform" method="post">
+
+	<label for="first">첫번째 점수 :</label>
+	<input type="text" name="first" id="fir"><br>
+	<label for="second">두번째 점수 :</label>
+	<input type="text" name="second" id="sec"><br>
+	<label for="sum">합계 :</label>
+	<input type="text" name="sum" id="sum"><br>
+
+	<input type="button" value="계산하기" onclick="calc();">
+</form>
+
+</body>
+</html>

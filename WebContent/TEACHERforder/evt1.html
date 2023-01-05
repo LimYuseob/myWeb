@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 즉시 실행 콜백이벤트함수예제</title>
+</head>
+<body>
+<div id="container">
+	<img alt="" src="cup-1.png" id="cup">
+</div>
+
+<script type="text/javascript">
+	var cup = document.getElementById("cup");
+	cup.onclick= () => alert("이미지를 클릭했군요");
+</script>
+</body>
+</html>

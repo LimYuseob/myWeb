@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function onloadDoc(){
+	alert("페이지가 로드됨..");
+	document.body.style.backgroundColor='yellow';
+}
+function makeUpper(){
+	var x = document.getElementById("word");
+	x.value = x.value.toLowerCase();
+}
+</script>
+</head>
+<body onload="onloadDoc()">
+	영어단어 입력 : <input type="text" id="word" onchange="makeUpper()"><!-- 값이 변경되었을때의 이벤트 enter 입력후 발생함  -->
+</body>
+</html>

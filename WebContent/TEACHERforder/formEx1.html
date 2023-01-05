@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function disp(data) {
+	alert(data.name);
+}
+</script>
+</head>
+<body>
+<form action="#" onsubmit="return false;" name="myform">
+	id <input type="text" name="id" onclick="disp(this);"><br><!-- this만주면 id 태그의 name 값 전달, this.form 주면 폼전달함 -->
+	pass <input type="password" name="pass">
+</form>
+</body>
+</html>

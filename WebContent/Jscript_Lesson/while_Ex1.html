@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+ * while(조건){조건이 true시 실행구문..}
+ */
+/*
+ var a = 1;
+ 
+ while(a > 0){
+	 document.write(a);
+ }
+*/
+
+//factorial 구하기.. !10
+
+//갑 입력 받기..
+var input = prompt("숫자를 입력해");
+//입력된 값이 null 이 아니면서 즉..아무것도 입력하지 않은 상태.. 0이 아니라면..
+if(input != null && input != 0){
+	//결과값을 담을 변수 선언..
+	var resultVal = 0;
+	var i = 1;
+	
+	while(i<=5){
+		resultVal += i;
+		i++;
+	}
+	msg = input + " != " + resultVal;		
+}else{
+	msg = "값이 없거나 0입니다.";
+	
+}
+document.write(msg);
+</script>
+
+</body>
+</html>

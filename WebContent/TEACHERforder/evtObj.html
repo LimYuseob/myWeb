@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event 객체의 속성</title>
+</head>
+<body>
+	<div id="container">
+		<img alt="" src="cup-1.png" id="cup">
+	</div>
+
+	<script type="text/javascript">
+		var cup = document.getElementById("cup");
+		cup.onclick = changepic;
+
+		function changepic(event) {
+			alert("이벤트 타입 " + event.type + " 발생 위치 : "  + event.pageX + "," + event.pageY);
+			this.src = 'cup-2.png';
+			//this 는 자신객체를 나타냄..
+			alert(this.src);
+		}
+	</script>
+</body>
+</html>

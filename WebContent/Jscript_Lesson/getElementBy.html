@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li>list item 1</li>
+	<li>list item 2</li>
+	<li>list item 3</li>
+	<li>list item 4</li>
+	<li>list item 5</li>
+	<li>list item 6</li>
+	<li>list item 7</li>
+</ul>
+<script type="text/javascript">
+var list = document.getElementsByTagName("ul")[0];
+var allitems = document.getElementsByTagName("li");
+
+
+for (var i = 0, length = allitems.length; i <length; i++){
+	alert(allitems[i].firstChild.data);
+	
+}
+
+
+
+
+
+</script>
+</body>
+</html>

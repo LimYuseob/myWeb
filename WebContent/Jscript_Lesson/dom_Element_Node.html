@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function get(){
+	//innerHTML 은 시작 태그와 끝 태그 사이의 모든 Tagh 및 Text 를 리턴시킵니다.
+	//innerHTML 는 시작 태그와 끝 태그 사이의 태그는 무시하고 오직 Text 만 리턴시킵니다.
+	var value = document.getElementById("ex").innerHTML;
+	alert(value);
+	
+	
+}
+function set(v){
+	var value = document.getElementById("ex").innerHTML = v;
+	
+	
+}
+
+
+var now = new Date();
+
+function innertext(){
+	document.getElementById("current").innerText = now;
+}
+function innerhtml(){
+	document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+}
+setTimeout(now,1000);
+
+</script>
+</head>
+<body>
+<div id="ex">
+	<a href="#" onclick="get();">div 요소 내용 출력 하기</a>
+	<a href="#" onclick="set('변경됨..');">div 요소 내용 변경 하기</a>
+</div>
+
+
+
+
+
+<button onclick="innertext()">innerText로 표기하기</button>
+<button onclick="innerhtml()">innerHTML로 표기하기</button>
+
+<h1>현재 시간 :</h1>
+<div id="current">
+
+
+
+
+</div>
+</body>
+</html>

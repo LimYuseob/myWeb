@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var model,color,mf;//사용자에게 문서에서 입력받는 값을 저장할 전역 변수..
+
+//생성자 함수를 이용해서 클래스처럼 정의 할 수 있다.
+//생성자(Constructor) 는 클래스에서 실제 Instance 를 생성해주면서, 필요에 따라
+//인스턴스의 속성을 초기화 하는 기능도 있다.(이거 기억하면 나중 자바 편해짐..)
+function Car(ownerNm, model, speed, color, mf){
+	this.ownerNm = ownerNm;			
+	this.model = model;
+	this.speed = speed;
+	this.color = color;
+	this.mf = mf;
+	
+	//메서드 정의..함수로 연결해주면 된다.
+	this.brake = function(){
+		this.speed -=10;
+	}
+	this.accel = function(){
+		this.speed += 10;
+		
+	}
+	this.dpNow = function(){
+		alert("현재 속도는 " + this.speed + " 입니다.");
+	}
+	//내 차의 모든 속성을 리턴하도록 재정의(override)
+	this.toString = function(){
+		return this.ownerNm+ "님의 차는" + model + "," + color + "," + mf + 
+		"에서 만들었다.";
+	}
+}
+
+moonsCar = new Car("문지광","아반떼",60,"black","Hyundai");
+myCar = new Car("임유섭","modelY",100,"white","Tesla");
+alert(moonsCar.toString());
+alert(myCar);
+</script>
+</body>
+</html>

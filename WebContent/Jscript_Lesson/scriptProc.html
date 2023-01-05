@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크립트 실행 순서 예제.</title>
+<style type="text/css">
+body{
+	text-align: center;
+
+}
+</style>
+</head>
+<body>
+<h1 id="heading">여긴 헤더내용</h1>
+<p id="text">여긴 문장내용 입니다.</p>
+
+<script>
+var pTag = document.querySelector("#text");
+var head = document.querySelector("#heading");
+
+pTag.onclick=function(){
+	pTag.style.backgroundColor = 'blue';
+	pTag.style.color = 'white';
+	
+}
+head.onclick=function(){
+	confirm("확인&취소");
+	head.style.color = 'red';
+	
+}
+
+
+
+</script>
+
+</body>
+</html>

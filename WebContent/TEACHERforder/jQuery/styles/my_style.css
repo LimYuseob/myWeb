@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+a:link img, a:visited img{
+	display: none;/*페이지 처음 로딩시 이미지 감춤*/
+	width: 205px;
+}
+a:hover img, a:active img{
+	display: block;/*마우스 오버나, 클릭시 이미지 보임*/
+	width: 205px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+#clickme{
+	background: #D8B36E;
+	padding: 20px;
+	text-align: center;
+	width: 205px;
+	display: block;
+	border: 2px solid #000;
+}
+#picframe{
+	background: #D8B36E;
+	padding: 20px;
+	width: 205px;
+	display: none;
+	border: 2px solid #000;
+}

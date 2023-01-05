@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+var fir,sec,yon;
+var result;
+
+function calc(){
+	
+	fir = document.getElementById("fir").value;
+	yon = document.getElementById("yon").value;
+	sec = document.getElementById("sec").value;
+	//연산자가 무엇인지 판별하는 함수를 호출 해봅시다.
+	
+	findYon(yon);
+}
+function findYon(yon){
+	switch(yon){
+	
+	case '+' :
+			result = parseInt(fir) + parseInt(sec);
+			break;
+	case '-' :
+			result = parseInt(fir) - parseInt(sec);
+			break;
+	case '*' :
+			result = parseInt(fir) * parseInt(sec);
+			break;
+	case '/' :
+			result = parseInt(fir) / parseInt(sec);
+			break;
+	
+	}
+	display(result);//msg 에는 결과는 result 입니다. 라고 뿌려질 값이 있고
+				//결과를 alert 로 출력하는 함수 이름은 display 입니다.
+	
+}
+function display(msg){
+	alert("결과는 " + msg + "입니다.");
+}
+
+
+</script>
+
+<title>함수를 이용한 간단한 계산기 예제</title>
+</head>
+<body>
+<form name="myform">
+첫수 : <input type="text" size="10" name="fir" id="fir">
+연산자 :  <input type="text" name="yon" id="yon">
+두번째 수 : <input type="text" name="sec" id="sec">
+<button onclick="calc();">연산하기</button>
+</form>
+</body>
+</html>

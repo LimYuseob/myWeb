@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function addNode(){
+	var newP = document.createElement("p");
+	var txtNode = document.createTextNode("DOM 을 이용해서 새로은 노드 및 텍스트 노드를 생성함.");
+	
+	newP.appendChild(txtNode);
+	//document.getElementById("sub").appendChild(newP);
+	document.getElementById("sub").appendChild(newP);
+}
+
+function addAttrNode(){
+	var newImg = document.createElement("img");
+	var srcNode = document.createAttribute("src");
+	
+	srcNode.value = 'dom.jpg';
+	newImg.setAttributeNode(srcNode);
+	
+	document.getElementById("sub").appendChild(newImg);
+}
+</script>
+</head>
+<body>
+<div id="main">
+	<h1>DOM 을 이용한 노드 추가하기</h1>
+	<a href="#" onclick="addNode(); this.onclick=''">추가하기</a>
+	<a href="#" onclick="addAttrNode(); this.onclick=''">이미지 추가하기</a>
+</div>
+<div id="sub"></div>
+</body>
+</html>

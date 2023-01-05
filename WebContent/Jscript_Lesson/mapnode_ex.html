@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function addNode(){
+	//동적으로 생성되는 노드객체에 대한 변수를 사용해야 합니다.
+	var newP = document.createElement("p");//p요소 즉 p Tag 가 생성됩니다. 
+	var txtNode = document.createTextNode("이 내용은 동적 생성된 노드의 내용입니다.");
+	
+	//txtNode를 newP 노드의 자식으로 append 시킵니다.
+	newP.appendChild(txtNode);
+	
+	//13번 라인에서 P 요소에 내용까지 넣었으니, P 요소를 어디에 배치(append) 시킬지
+	//부모요소를 찾아서 append 시키면 됩니다.
+	document.getElementById("sub").appendChild(newP);
+	
+	
+	
+	
+	
+}
+function addImgNode(){
+	//1.이미지건 뭐건 일단 노드를 생성하고 속성이 있는 노드는 속성 노드를 생성후 연결하면됨
+	var newImg = document.createElement("img");
+	var srcNode = document.createAttribute("src");
+	
+	srcNode.value = "images/dom.jpg";
+	//이미지 노드에 속성노드를 연결하면 <img src="images/dom.jpg">가 된다.
+	newImg.setAttributeNode(srcNode);
+	document.getElementById("sub").appendChild(newImg);
+	
+}
+
+
+</script>
+</head>
+<body>
+<div id="main">
+	<h1>DOM 을 이용한 동적 Node 생성하기</h1>
+	<a href="#" onclick="addNode(); this.onclick=''">추가하기</a>
+	<a href="#" onclick="addImgNode(); this.onclick=''">이미지 추가하기</a>
+
+</div>
+<!-- 동적으로 추가되는 노드가 위치할 DIV 생성..즉 동적노드의 부모가 됩니다. -->
+<div id="sub">
+
+</div>
+</body>
+</html>

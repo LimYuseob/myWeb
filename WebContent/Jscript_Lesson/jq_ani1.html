@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jq_ani1</title>
+<script type="text/javascript" src="JQuery/jquery-3.6.2.min.js"></script>
+<script type="text/javascript">
+//show("상수 또는 Millis"), hide()를 이용해서 간단한 애니메이션 효과 보기
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#child").show("slow",function(){
+			$(this).hide(3000,function(){
+				$(this).toggle();
+			})
+		})
+	});
+});
+
+
+</script>
+</head>
+<body>
+<button>show it</button>
+<img alt="" src="../my1sthome/images/seoul.jpg" id="child" width="120" height="100"
+style="display: none;">
+</body>
+</html>

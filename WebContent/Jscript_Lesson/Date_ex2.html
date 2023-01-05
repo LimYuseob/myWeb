@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//구매기간이 30일 경과 여부를 계산하는 함수정의
+function checkDate(){
+	var s = document.getElementById("pdate").value;
+	//alert(s);
+	var pdate = new Date(s);
+	var today = new Date();
+	
+	//두 날짜의 편차를 구해봅니다.
+	var diff = today.getTime() - pdate.getTime();
+	//이걸 일단위로 변환..
+	var days = Math.floor(diff/(100 * 60 * 60 * 24));
+	//alert(days);
+	
+	if(days > 30){
+		alert("30일이 경과되었습니다. 반품이 불가합니다.");
+		
+	}
+}
+</script>
+</head>
+<body>
+구입일 : <input type="date" id="pdate">
+<button onclick="checkDate();">반품기간검사</button>
+</body>
+</html>

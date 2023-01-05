@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+속성중 특정 속성값이 포홤되어 있으면 모두 가져오기..
+[attr ~= '값'] like --> DB 사용되는 용어...내용중에 찾으려고 하는 값이 포함되어 있으면 리턴..
+사용목적 : 하나의 요소에 여러 클래스 스타일을 적용시, 특정 요소 스타일이 있는 요소만 찾고 싶을때..
+*/
+li{
+	display: inline-block;
+	margin: 10px;
+	
+}
+
+li a{
+	padding: 5px 20px;
+	font-size: 14px;
+	color: blue;
+}
+
+.flat{
+	background: #eee;
+	border: 1px solid #222;
+}
+
+a[class ~= "button"]{/*속성 값중 buuton 과 일치하는 것만 추출*/
+	box-shadow: rgba(0,0,0,5) 4px 4px;
+	border-radius: 5px;
+	border: 1px solid;
+}
+a[title |= "us"]{/*이건_(언더바)를 포함하여 값을 찾아라 리턴시킴 |<--쉬프트+역슬래시*/
+/*속성값이 us 이거나 us- 로 시작하는 요소를 찾는다.*/
+	background: url(images/us.png) no-repeat left center;
+}
+a[title |= "jp"]{
+	background: url(images/jp.png) no-repeat left center;
+}
+a[title |= "ch"]{
+	background: url(images/ch.png) no-repeat left center;
+}
+
+/*
+^="value" --> 속성값이 비교값("value")과 시작이 같을때 리턴..start with, end with
+*/
+
+a[title ^= "us"]{
+	background-color: blue;
+}
+a[title ^= "jp"]{
+	background-color: red;
+}
+
+/*속성의 끝 값이 비교값과 같은경우만 리턴
+$= (end with)
+*/
+a[href $= hwp]{
+	background: url(images/hwp_icon.gif) center right no-repeat;
+}
+a[href $= xls]{
+	background: url(images/excel_icon.gif) center right no-repeat;
+}
+
+/*
+like 연산자 *= : 값이 포함되어 있으면 모두 리턴*/
+*/
+a[href *= "w3"]{
+	background-color: blue;
+	color: white;
+	
+}
+</style>
+</head>
+<body>
+<h3>협력사 사이트</h3>
+<ul>
+	<li><a href="https://html.spec.whatwg.org">HTML 표준Spec 사이트</a></li>
+	<li><a href="https://caniuse.com">HTML 지원여부 확인 사이트</a></li>
+	<li><a href="https://www.w3.org">World wide web site</a></li>
+
+</ul>
+
+
+
+
+<h3>파일 다운로드 하기</h3>
+<ul>
+	<li><a href="intro.hwp">hwp파일</a></li>
+	<li><a href="intro.xls">xls파일</a></li>
+	
+</ul>
+
+<ul>
+	<li><a href="#" title="us-english"></a></li>
+	<li><a href="#" title="jp"></a></li>
+	<li><a href="#" title="ch"></a></li>
+
+</ul>
+	<ul>
+		<li><a href="#" class="flat">메뉴1</a></li>
+		<li><a href="#" class="flat">메뉴2</a></li>
+		<li><a href="#" class="flat">메뉴3</a></li>
+		<li><a href="#" class="flat button">메뉴4</a></li>
+	</ul>
+</body>
+</html>

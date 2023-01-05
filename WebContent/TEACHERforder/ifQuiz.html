@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Find Number</title>
+</head>
+<body>
+<h2>숫자 맞추기 게임</h2>
+<script type="text/javascript">
+	var  comNumber = 53; //정답
+	var nGuesses = 0;
+	
+	function guess(){
+		var result = "";
+		
+		var number = parseInt(document.getElementById("user").value);
+		nGuesses++;
+		
+		if(number == comNumber) result = "성공입니다";
+		else if(number < comNumber) result = "낮습니다";
+		else result = "높습니다.";
+		
+		document.getElementById("result").value = result;
+		document.getElementById("guesses").value = nGuesses;
+		
+		return true;
+	}
+</script>
+이 게임은 컴이 생성한 숫자를 맞추는 게임임.. 숫자는 1 ~ 100 사이에 있음.
+<form action="">
+	숫자 : <input type="text" id="user" size="9">
+	<input type="button" value="확인" onclick="guess();">
+	추측횟수 : <input type="text" id="guesses" size="5">
+	힌트 : <input type="text" id="result" size="16">
+</form>
+</body>
+</html>

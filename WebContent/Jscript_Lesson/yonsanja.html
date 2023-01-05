@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연산자의 우선수위와 사용법을 배워봅니다.</title>
+</head>
+<body>
+<script type="text/javascript">
+//최단산쉬관비놈배후 -> 연산자 우선 순위
+
+//2번째 우선순위인 선행 연산자를 알아봅니다.
+/*
+	var a = 1;
+	b = ++a;
+	alert(b + " : " + a);
+	
+	b = --a;
+	alert(b + " : " + a);
+	
+	b = a++;
+	alert(b + " : " + a);
+	*/
+	/*
+	var isMyStu = false;
+	
+	if(!isMyStu){
+		alert("누구세요?");
+		
+	}
+
+//typeof 를 코드내에서 사용시엔 함수처럼 사용해야 합니다.
+	alert(typeof("hello"));
+
+	var v1 ="1";
+
+//moduler 연산자.. 연산되는 2개의 항을 나눈후 나머지를 취하는 연산자 입니다.
+
+	alert(2/2);
+	alert(2 % 2);
+*/
+//삼항연산자 형식 : 조건 ? "조건의 결과가 true 시 return 값" : "false 시 리턴값"
+/*
+	var gencode = prompt("주민번호 7 번째값을 넣으세요",'');
+
+	message = gencode % 2 == 0?"여성" : "남성";
+
+	alert("당신은" + message + "입니다");
+*/
+		var i = 3;
+		var s = "3";
+// === 연산자... 타입까지 구분해서 같은 타입 및 값이면 true of false;
+
+		alert(i !== s);
+		
+//<,<=,>,>= ; 관계연산자..의 리턴은 항상 boolean type이다.
+//따라서 조건문과 반드시 같이 수행을 한다.
+/*
+		if(i < 5){//i가 5보다 작으면 true 리턴..
+			alert(i + "는 5보다 작은 수 입니다.");
+		}
+		else{
+				alert(i + "는 5보다 큰 수 입니다.");
+		}
+
+
+		var ch = 'A';
+		if(ch.charCodeAt(0) <= 66){
+				alert("대문자 A와 같거나, 작은값의 문자입니다.");
+		}
+		
+		if(true || false){
+				alert("여기는 && 연산자, 즉 모두 true 이기 때문에 적용된 if 절입니다.");
+		}else{
+				alert("두 논리값이 모두 true 가 아니어서 여기가 실행됩니다.")
+		}
+*/
+
+		//배정대입은 자신의 값을 연산후 다시 자신에게 대입하는 연사자입니다.
+		var c = 1;
+		
+		c = c+1;
+
+</script>
+</body>
+</html>

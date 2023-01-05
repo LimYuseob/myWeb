@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//일회성 객체를 정의하여 속성 및 메서드를 사용해 봅니다.
+var myCar = {
+		model : "Tesla",
+		color : "white",
+		speed : 60,
+		
+		accel : function(){
+			this.speed += 10;
+		},
+		brake : function(){
+			this.speed -= 10;
+			
+		},
+		//계기판을 메서드로..
+		dpSpeed : function(){
+			return this.speed;
+		}
+		
+}
+alert(myCar.model);
+alert(myCar.speed);
+myCar.accel();
+alert("현재 내차의 속력 : " + myCar.dpSpeed());
+</script>
+</head>
+<body>
+
+</body>
+</html>

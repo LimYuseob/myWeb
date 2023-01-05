@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#container{
+	width: 300px;
+	margin: 10px auto;
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<img alt="" src="easys-1.jpg" id="cover">
+</div>
+<script type="text/javascript">
+var cover = document.getElementById("cover");
+
+cover.addEventListener('mouseover',changePic);//핸들러 함수를 지정할 땐 반드시 ()를 뺀다.
+cover.addEventListener('mouseout',originPic);//핸들러 함수를 지정할 땐 반드시 ()를 뺀다.
+
+//ex2..만약 일회성 함수..즉 재사용이 없는 해당 node 에만 필요한 경우엔 무명 함수로 바로 연결가능하다.
+
+/*
+cover.addEventListener('mouseover',function(){
+	alert(this);
+	this.src = 'easys-2.jpg';
+});
+cover.addEventListener('mouseout',function(){
+	this.src = 'easys-1.jpg';
+});
+*/
+
+function changePic(){
+	cover.src = "easys-2.jpg";
+}
+function originPic(){
+	cover.src = "easys-1.jpg"; 
+}
+</script>
+</body>
+</html>

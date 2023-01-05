@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div.con{
+	background-color: yellow;
+	border: thick;
+	width: 300px;
+	height: 300px;
+}
+</style>
+<script type="text/javascript" src="jquery-3.6.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("input").focus(function(){
+		$(this).css("background-color","yellow");
+	});
+	$("input").blur(function(){
+		$(this).css("background-color","white");
+	});
+});
+
+
+//아래는 하나의 요소에 여러 개의 이벤트를 연결하는 방법이다.
+$(document).ready(function(){
+	$("div").on({
+		mouseenter: function(){
+			$(this).css("background-color","gray");
+		},
+		click:function(){
+			$(this).css("background-color","white");	
+		},
+		mousewheel:function(){
+			$(this).css("background-color","orange");
+		}
+	});
+});
+</script>
+</head>
+<body>
+아이디 : <input type="text" name="name"><br>
+<div class="con">
+</div>
+</body>
+</html>
